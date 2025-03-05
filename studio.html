@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Studio - Mardiyana Tech</title>
+    
+    <!-- Tailwind CSS & GSAP -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    
+    <style>
+        .active-filter {
+            background-color: #1e40af !important;
+        }
+    </style>
+</head>
+<body class="bg-gray-900 text-white">
+    
+      <!-- Header -->
+      <header class="p-6 bg-gray-800 shadow-md fixed w-full top-0 left-0 z-50">
+        <div class="container mx-auto flex justify-between items-center">
+            <img src="./asset/logo.jpg" alt="Mardiyana Studio" class="h-12 rounded-[20px]">
+            <h1 class="text-xl font-bold">Mardiyana Tech Studio</h1>
+            <a href="index.html" class="text-blue-400 hover:text-blue-300">Kembali</a>
+        </div>
+    </header>
+    
+    <!-- Hero Section -->
+    <section class="text-center py-32 bg-gradient-to-r from-blue-600 to-purple-600 mt-16">
+        <h2 id="title" class="text-5xl font-extrabold">Showcase Studio</h2>
+        <p id="subtitle" class="mt-4 text-lg opacity-80">Demo dan visual website</p>
+    </section>
+
+    <div class="container mx-auto py-12 px-6">
+        <!-- Filter Buttons -->
+        <div class="flex justify-center flex-wrap gap-4 mb-8">
+            <button class="filter-btn px-5 py-2 bg-blue-600 rounded-lg hover:bg-blue-700 transition active-filter" data-filter="all">Semua</button>
+            <button class="filter-btn px-5 py-2 bg-green-600 rounded-lg hover:bg-green-700 transition" data-filter="landing-page">Landing Page</button>
+            <button class="filter-btn px-5 py-2 bg-purple-600 rounded-lg hover:bg-purple-700 transition" data-filter="undangan-digital">Undangan Digital</button>
+        </div>
+
+        <!-- Project Grid -->
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8" id="project-list">
+            <!-- Project Cards -->
+            <div class="project-card landing-page bg-gray-800 shadow-xl rounded-lg overflow-hidden transform transition hover:scale-105">
+                <img src="screenshot-landing-page-1.jpg" onerror="this.onerror=null;this.src='https://placehold.co/400x300?text=No+Image'" alt="Landing Page 1" class="w-full h-48 object-cover">
+                <div class="p-6">
+                    <h4 class="font-semibold text-xl">Landing Page 1</h4>
+                    <p class="text-gray-400 mb-4">Desain modern dan profesional.</p>
+                    <a href="https://demo-landing-page-1.com" target="_blank" class="px-4 py-2 bg-blue-600 rounded hover:bg-blue-700 text-white inline-block">Lihat Demo</a>
+                </div>
+            </div>
+
+            <div class="project-card landing-page bg-gray-800 shadow-xl rounded-lg overflow-hidden transform transition hover:scale-105">
+                <img src="screenshot-landing-page-1.jpg" onerror="this.onerror=null;this.src='https://placehold.co/400x300?text=No+Image'" alt="Landing Page 1" class="w-full h-48 object-cover">
+                <div class="p-6">
+                    <h4 class="font-semibold text-xl">Landing Page 2</h4>
+                    <p class="text-gray-400 mb-4">Cocok untuk startup dan bisnis.</p>
+                    <a href="https://demo-landing-page-2.com" target="_blank" class="px-4 py-2 bg-blue-600 rounded hover:bg-blue-700 text-white inline-block">Lihat Demo</a>
+                </div>
+            </div>
+
+            <div class="project-card undangan-digital bg-gray-800 shadow-xl rounded-lg overflow-hidden transform transition hover:scale-105">
+                <img src="screenshot-landing-page-1.jpg" onerror="this.onerror=null;this.src='https://placehold.co/400x300?text=No+Image'" alt="Landing Page 1" class="w-full h-48 object-cover">
+                <div class="p-6">
+                    <h4 class="font-semibold text-xl">Undangan Digital 1</h4>
+                    <p class="text-gray-400 mb-4">Desain elegan dan interaktif.</p>
+                    <a href="https://demo-undangan-1.com" target="_blank" class="px-4 py-2 bg-green-600 rounded hover:bg-green-700 text-white inline-block">Lihat Demo</a>
+                </div>
+            </div>
+
+            <div class="project-card undangan-digital bg-gray-800 shadow-xl rounded-lg overflow-hidden transform transition hover:scale-105">
+                <img src="screenshot-landing-page-1.jpg" onerror="this.onerror=null;this.src='https://placehold.co/400x300?text=No+Image'" alt="Landing Page 1" class="w-full h-48 object-cover">
+                <div class="p-6">
+                    <h4 class="font-semibold text-xl">Undangan Digital 2</h4>
+                    <p class="text-gray-400 mb-4">Cocok untuk pernikahan dan acara spesial.</p>
+                    <a href="https://demo-undangan-2.com" target="_blank" class="px-4 py-2 bg-green-600 rounded hover:bg-green-700 text-white inline-block">Lihat Demo</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Animasi GSAP
+        gsap.from(".project-card", { opacity: 0, y: 50, duration: 1, stagger: 1, ease: "power2.out" });
+        gsap.from("#title", { opacity: 0, y: -50, duration: 1, ease: "power2.out" });
+        gsap.from("#subtitle", { opacity: 0, y: -30, duration: 1, delay: 0.5, ease: "power2.out" });
+
+        // Filter Projects
+        document.querySelectorAll(".filter-btn").forEach(button => {
+            button.addEventListener("click", function() {
+                let filter = this.dataset.filter;
+                document.querySelectorAll(".filter-btn").forEach(btn => btn.classList.remove("active-filter"));
+                this.classList.add("active-filter");
+                
+                document.querySelectorAll(".project-card").forEach(card => {
+                    if (filter === "all" || card.classList.contains(filter)) {
+                        gsap.to(card, { opacity: 1, scale: 1, duration: 0.3, display: "block" });
+                    } else {
+                        gsap.to(card, { opacity: 0, scale: 0.8, duration: 0.3, display: "none" });
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>

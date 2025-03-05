@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Layanan - Mardiyana Tech</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/js/all.min.js" crossorigin="anonymous"></script>
+</head>
+<body class="bg-gray-900 text-white">
+    
+    <!-- Header -->
+    <header class="p-6 bg-gray-800 shadow-md fixed w-full top-0 left-0 z-50">
+        <div class="container mx-auto flex justify-between items-center">
+            <img src="./asset/logo.jpg" alt="Mardiyana Studio" class="h-12 rounded-[20px]">
+            <h1 class="text-xl font-bold">Mardiyana Tech Studio</h1>
+            <a href="index.html" class="text-blue-400 hover:text-blue-300">Kembali</a>
+        </div>
+    </header>
+    
+    <!-- Hero Section -->
+    <section class="text-center py-24 bg-gradient-to-r from-blue-600 to-purple-600 mt-16">
+        <h2 id="title" class="text-4xl font-bold">Service</h2>
+        <p id="subtitle" class="mt-4 text-lg">Menyediakan berbagai layanan pengembangan web profesional.</p>
+    </section>
+
+<!-- Services Section -->
+<section class="container mx-auto py-12 px-6 relative z-[100]">
+    <div class="grid md:grid-cols-3 gap-6 mt-6 px-6">
+        <div class="service-card p-6 bg-gray-800 shadow-lg rounded-lg transform transition duration-500 hover:scale-105 hover:bg-gradient-to-r from-blue-600 to-purple-600 hover:shadow-xl">
+            <div class="icon-container mb-4 flex justify-center">
+                <i class="fas fa-laptop-code text-white text-4xl"></i> 
+            </div>
+            <h4 class="font-semibold text-white">Landing Page</h4>
+            <p class="text-gray-300">Tampilan cepat dan profesional.</p>
+        </div>
+
+        <div class="service-card p-6 bg-gray-800 shadow-lg rounded-lg transform transition duration-500 hover:scale-105 hover:bg-gradient-to-r from-green-600 to-teal-600 hover:shadow-xl">
+            <div class="icon-container mb-4 flex justify-center">
+                <i class="fas fa-envelope-open-text text-white text-4xl"></i> 
+            </div>
+            <h4 class="font-semibold text-white">Undangan Digital</h4>
+            <p class="text-gray-300">Desain undangan yang elegan dan interaktif.</p>
+        </div>
+
+        <div class="service-card p-6 bg-gray-800 shadow-lg rounded-lg transform transition duration-500 hover:scale-105 hover:bg-gradient-to-r from-pink-600 to-red-600 hover:shadow-xl">
+            <div class="icon-container mb-4 flex justify-center">
+                <i class="fas fa-code text-white text-4xl"></i> 
+            </div>
+            <h4 class="font-semibold text-white">Website Custom</h4>
+            <p class="text-gray-300">Dibangun sesuai kebutuhan bisnis Anda.</p>
+        </div>
+    </div>
+</section>
+
+<script>
+    // Animasi tambahan untuk title dan subtitle jika ada
+    gsap.from("#title", { opacity: 0, y: -50, duration: 1, ease: "power2.out" });
+    gsap.from("#subtitle", { opacity: 0, y: -30, duration: 1, delay: 0.5, ease: "power2.out" });
+</script>
+
+
+</body>
+</html>
