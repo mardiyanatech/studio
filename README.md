@@ -19,4 +19,4 @@
 📁 `asset/` → Gambar mockup & demo  
 
 📩 **Hubungi Kami:**  
-🔗 [Facebook][(https://web.facebook.com/profile.php?id=61573528935965)] | [Instagram](https://instagram.com/mardiyanatech) | [WhatsApp](https://wa.me/62895364454843)  
+🔗 [Facebook](https://web.facebook.com/profile.php?id=61573528935965) | [Instagram](https://instagram.com/mardiyanatech) | [WhatsApp](https://wa.me/62895364454843)  
