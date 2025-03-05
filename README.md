@@ -16,7 +16,7 @@
 📂 **GitHub Repo Struktur:**  
 📁 `landing-pages/` → Koleksi template landing page siap pakai  
 📁 `undangan-digital/` → Undangan digital elegan  
-📁 `client-projects/` → Proyek website pelanggan  
+📁 `asset/` → Gambar mockup & demo  
 
 📩 **Hubungi Kami:**  
 🔗 [Facebook][(https://web.facebook.com/profile.php?id=61573528935965)] | [Instagram](https://instagram.com/mardiyanatech) | [WhatsApp](https://wa.me/62895364454843)  
