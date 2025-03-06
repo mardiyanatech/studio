@@ -1,247 +1,80 @@
 <!DOCTYPE html>
 <html lang="id">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Warplaystation</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Playstation</title>
         
-        @keyframes fadeIn {
-            0% { opacity: 0; transform: scale(0.8); }
-            100% { opacity: 1; transform: scale(1); }
-        }
-
-        @keyframes glitch {
-            0% { transform: translate(0); }
-            20% { transform: translate(-2px, 2px); }
-            40% { transform: translate(2px, -2px); }
-            60% { transform: translate(-2px, 2px); }
-            80% { transform: translate(2px, -2px); }
-            100% { transform: translate(0); }
-        }
-
-        @keyframes bgAnimation {
-            0% { background-position: 0% 50%; }
-            50% { background-position: 100% 50%; }
-            100% { background-position: 0% 50%; }
-        }
-
-        .fade-in {
-            animation: fadeIn 1.2s ease-out;
-        }
-
-        .glitch {
-            display: inline-block;
-            animation: glitch 0.15s infinite alternate;
-        }
-
-        .neon-border {
-            box-shadow: 0 0 10px #ff0000, 0 0 20px #ff0000, 0 0 40px #ff0000;
-        }
-
-        .bg-animated {
-            background-size: 200% 200%;
-            animation: bgAnimation 10s infinite alternate ease-in-out;
-        }
-
-        .font-game {
-            font-family: 'Press Start 2P', cursive;
-        }
-        /* Efek Fade-In saat muncul */
-#event {
-    opacity: 0;
-    transform: translateY(50px);
-    transition: opacity 1s ease-out, transform 1s ease-out;
-}
-#event.show {
-    opacity: 1;
-    transform: translateY(0);
+        <!-- Tailwind CSS -->
+        <script src="https://cdn.tailwindcss.com"></script>
+        
+        <!-- FontAwesome -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+        
+        <!-- Google Font -->
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap">
+        
+        <style>
+            /* Efek Glitch pada Judul */
+            @keyframes glitch {
+    0% { text-shadow: 2px 2px 5px red, -2px -2px 5px blue; }
+    50% { text-shadow: -2px -2px 5px red, 2px 2px 5px blue; }
+    100% { text-shadow: 2px 2px 5px red, -2px -2px 5px blue; }
 }
 
-/* Kartu Event dengan efek glow */
-.event-card {
-    background: rgba(31, 31, 31, 0.9);
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0px 0px 15px rgba(255, 255, 255, 0.1);
-    transition: all 0.3s ease-in-out;
-}
-.event-card:hover {
-    transform: scale(1.05);
-    box-shadow: 0px 0px 25px rgba(255, 255, 255, 0.3);
+.glitch {
+    animation: glitch 1s infinite alternate;
 }
 
-/* Tombol Neon */
-.neon-button {
-    display: inline-block;
-    margin-top: 10px;
-    background: linear-gradient(90deg, #ff416c, #ff4b2b);
-    padding: 10px 20px;
-    border-radius: 8px;
-    font-size: 1.2rem;
-    font-weight: bold;
-    color: white;
-    transition: all 0.3s ease-in-out;
-    box-shadow: 0px 0px 10px rgba(255, 65, 108, 0.8);
-    position: relative;
-    overflow: hidden;
+
+/* Efek Glow Teks */
+@keyframes glow-text {
+    0%, 100% { text-shadow: 0 0 10px #0f0, 0 0 20px #0f0; }
+    50% { text-shadow: 0 0 20px #0f0, 0 0 40px #0f0; }
 }
-.neon-button:hover {
-    transform: scale(1.1);
-    box-shadow: 0px 0px 20px rgba(255, 65, 108, 1);
+.animate-glow-text {
+    animation: glow-text 1.5s infinite alternate;
 }
-.neon-button::after {
-    content: "";
+
+/* Efek Neon Border untuk Tombol */
+.neon-border {
+    box-shadow: 0 0 10px #0ff, 0 0 20px #0ff;
+}
+.neon-border:hover {
+    box-shadow: 0 0 20px #ff0, 0 0 40px #ff0;
+}
+
+/* Efek Partikel Gaming */
+.particle {
     position: absolute;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: -100%;
-    background: rgba(255, 255, 255, 0.2);
-    transition: left 0.4s ease-in-out;
+    width: 10px;
+    height: 10px;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 50%;
+    opacity: 0.7;
+    animation: moveParticle 3s linear infinite;
 }
-.neon-button:hover::after {
-    left: 100%;
-}
-/* Animasi Fade-in */
-#harga {
-    opacity: 0;
-    transform: translateY(50px);
-    transition: opacity 1s ease-out, transform 1s ease-out;
-}
-#harga.show {
-    opacity: 1;
-    transform: translateY(0);
+@keyframes moveParticle {
+    0% { transform: translateY(0); opacity: 1; }
+    100% { transform: translateY(-50px); opacity: 0; }
 }
 
-/* Kartu Harga */
-.price-card {
-    background: rgba(31, 31, 31, 0.9);
-    padding: 25px;
-    border-radius: 12px;
-    box-shadow: 0px 0px 20px rgba(255, 255, 255, 0.1);
-    transition: all 0.4s ease-in-out;
-    position: relative;
-    overflow: hidden;
-}
-
-/* Efek Hover Glow */
-.price-card:hover {
-    transform: scale(1.07);
-    box-shadow: 0px 0px 25px rgba(255, 255, 255, 0.4);
-}
-
-/* Efek Cahaya Bergerak */
-.price-card::before {
-    content: "";
-    position: absolute;
-    width: 150%;
-    height: 150%;
-    top: -50%;
-    left: -50%;
-    background: radial-gradient(circle, rgba(255, 255, 255, 0.1), transparent);
-    animation: light-move 3s linear infinite;
-}
-@keyframes light-move {
-    0% { transform: rotate(0deg); }
-    100% { transform: rotate(360deg); }
-}
-
-/* Grid Latar Belakang */
-.bg-grid {
-    background-image: linear-gradient(rgba(255,255,255,0.05) 1px, transparent 1px), 
-                      linear-gradient(to right, rgba(255,255,255,0.05) 1px, transparent 1px);
-    background-size: 40px 40px;
-    position: absolute;
-    z-index: 0;
-}
-
-/* Responsive */
-@media (max-width: 768px) {
-    .price-card {
-        padding: 20px;
-    }
-    .game-img {
-        height: 200px;
-    }
-}
-/* Animasi Fade-in */
-#fitur {
-    opacity: 0;
-    transform: translateY(50px);
-    transition: opacity 1s ease-out, transform 1s ease-out;
-}
-#fitur.show {
-    opacity: 1;
-    transform: translateY(0);
-}
-
-/* Game Card */
-.game-card {
-    position: relative;
-    overflow: hidden;
-    border-radius: 12px;
-    box-shadow: 0px 0px 15px rgba(255, 255, 255, 0.1);
-    transition: transform 0.4s ease-in-out, box-shadow 0.4s ease-in-out;
-}
-.game-card:hover {
-    transform: scale(1.05);
-    box-shadow: 0px 0px 25px rgba(255, 255, 255, 0.3);
-}
-
-/* Gambar Game */
-.game-img {
-    width: 100%;
-    height: 240px;
-    object-fit: cover;
-    transition: transform 0.4s ease-in-out;
-}
-.game-card:hover .game-img {
-    transform: scale(1.15);
-}
-
-/* Overlay Efek */
-.game-overlay {
-    position: absolute;
-    inset: 0;
-    background: rgba(0, 0, 0, 0.7);
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    opacity: 0;
-    transition: opacity 0.4s ease-in-out;
-}
-.game-card:hover .game-overlay {
-    opacity: 1;
-}
-
-/* Efek Grid Background */
-.bg-grid {
-    background-image: linear-gradient(rgba(255,255,255,0.05) 1px, transparent 1px), 
-                      linear-gradient(to right, rgba(255,255,255,0.05) 1px, transparent 1px);
-    background-size: 40px 40px;
-    position: absolute;
-    z-index: 0;
-}
-
-    </style>
-</head>
+        </style>
+    </head>
+    
 <body class="bg-gray-900 text-white">
- <!-- Navbar -->
+<!-- Navbar -->
 <header class="fixed top-0 left-0 w-full bg-black bg-opacity-70 backdrop-blur-md shadow-md z-50">
     <div class="max-w-6xl mx-auto flex justify-between items-center px-6 py-4">
         <!-- Logo -->
-        <h1 class="text-3xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-yellow-400 via-red-500 to-purple-600">
-            🎮 WarPlayStation
+        <h1 class="text-3xl font-extrabold bg-clip-text text-transparent bg-gradient-to-r from-yellow-400 via-red-500 to-purple-600">
+            🎮 PlayStation 🎮
         </h1>
 
         <!-- Menu (Desktop) -->
         <nav class="hidden md:flex space-x-6 text-white font-semibold text-lg">
-            <a href="#event" class="hover:text-red-400 transition">Event</a>
-            <a href="#kontak" class="hover:text-blue-400 transition">Contact</a>
+            <a href="#event" class="hover:text-red-400 hover:underline transition-all">Event</a>
+            <a href="#kontak" class="hover:text-blue-400 hover:underline transition-all">Contact</a>
         </nav>
 
         <!-- Hamburger Button (Mobile) -->
@@ -252,116 +85,200 @@
         </button>
     </div>
 
-    <!-- Mobile Menu -->
-    <nav id="mobile-menu" class="hidden md:hidden flex flex-col items-center bg-black bg-opacity-90 text-white font-semibold text-lg space-y-4 py-4 absolute w-full left-0 top-16 shadow-lg">
-        <a href="#event" class="hover:text-red-400 transition">Event</a>
-        <a href="#kontak" class="hover:text-blue-400 transition">Contact</a>
-    </nav>
+  <!-- Mobile Menu -->
+<nav id="mobile-menu" class="hidden opacity-0 translate-y-[-10px] transition-all duration-300 flex flex-col items-center bg-black bg-opacity-90 text-white font-semibold text-lg space-y-4 py-4 absolute w-full left-0 top-16 shadow-lg">
+    <a href="#event" class="hover:text-red-400 hover:underline transition-all">Event</a>
+    <a href="#kontak" class="hover:text-blue-400 hover:underline transition-all">Contact</a>
+</nav>
 </header>
+
     
 <!-- Hero Section -->
-<section class="h-screen flex flex-col items-center justify-center text-center px-6 relative overflow-hidden bg-center bg-cover"
-    style="background-image: url('./asset/rental-ps.jpg');">
-    <div class="absolute inset-0 bg-black bg-opacity-70"></div>
-    <div class="relative z-10 fade-in">
-        <h1 class="text-5xl font-bold mb-4 drop-shadow-lg text-transparent bg-clip-text bg-gradient-to-r from-yellow-400 via-red-500 to-purple-600 glitch">
+<section id="hero"
+    class="h-screen flex flex-col items-center justify-center text-center px-6 relative overflow-hidden bg-cover bg-center lg:bg-fixed"
+    style="background-image: url('./asset/rental-ps.jpg'); background-size: cover; background-position: center;">
+    
+    <!-- Overlay -->
+    <div class="absolute inset-0 bg-black bg-opacity-70 backdrop-blur-sm"></div>
+
+    <!-- Content -->
+    <div class="relative z-10">
+        <h1 class="text-6xl md:text-7xl font-extrabold drop-shadow-lg text-transparent bg-clip-text bg-gradient-to-r from-yellow-400 via-red-500 to-purple-600 glitch">
             Main PS Tanpa Batas! 🕹️🔥
         </h1>
-        <p class="text-lg mb-6 max-w-xl mx-auto text-green-400 font-mono">
+        <p class="text-xl md:text-2xl mt-4 mb-8 max-w-xl mx-auto text-green-400 font-exo animate-glow-text">
             Sewa PlayStation dengan harga terjangkau & fasilitas terbaik.
         </p>
-        <a href="#harga" class="bg-gradient-to-r from-blue-600 to-purple-600 px-6 py-3 rounded-lg text-lg font-semibold hover:from-blue-500 hover:to-purple-500 transition-transform transform hover:scale-110 shadow-lg neon-border">
+        <a href="#harga"
+            class="bg-gradient-to-r from-blue-600 to-purple-600 px-8 py-4 md:px-10 md:py-5 rounded-xl text-xl md:text-2xl font-bold 
+            hover:from-blue-500 hover:to-purple-500 transition-transform transform hover:scale-110 shadow-xl neon-border animate-pulse font-orbitron">
             🎟️ Lihat Paket Harga
         </a>
     </div>
+
+    <!-- Efek Partikel Gaming -->
+    <div id="hero-particles" class="absolute inset-0"></div>
 </section>
+
+
+
+
+
     
- <!-- Fitur & Layanan -->
-<section id="fitur" class="py-16 px-6 bg-black bg-opacity-80 text-white relative overflow-hidden">
-    <!-- Judul dengan efek glitch -->
-    <h2 class="text-4xl font-bold text-center mb-12 text-transparent bg-clip-text bg-gradient-to-r from-yellow-400 via-red-500 to-purple-600 animate-pulse">
-        🎮 Kumpulan Game Seru!
+
+<!-- Fitur -->
+<section id="fitur" class="py-16 px-6 bg-black text-white">
+    <h2 class="text-4xl font-extrabold text-center mb-12 text-transparent bg-clip-text bg-gradient-to-r from-yellow-400 via-red-500 to-purple-600 glitch-text">
+        🎮 KUMPULAN GAME SERU! ⚡
     </h2>
 
-    <div class="grid md:grid-cols-3 gap-8 text-center relative z-10">
-        <!-- Game 1 -->
-        <div class="game-card">
-            <img src="./asset/cod.jpg" alt="Call of Duty" class="game-img">
-            <div class="game-overlay">
-                <h3 class="text-xl font-semibold text-yellow-400">Game Lengkap</h3>
-                <p class="mt-2 max-w-xs">Tersedia berbagai game terbaru dan favorit.</p>
+    <!-- Grid Container -->
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 text-center">
+        
+        <!-- Game Card 1 -->
+        <div class="group relative rounded-lg overflow-hidden shadow-lg border-2 border-yellow-400 hover:border-yellow-500 transition-all duration-500 card-glow">
+            <img src="./asset/cod.jpg" alt="Call of Duty"
+                class="w-full h-64 object-cover transition-transform duration-500 group-hover:scale-110">
+            <div class="absolute inset-0 bg-black bg-opacity-70 flex flex-col items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+                <h3 class="text-xl font-semibold text-yellow-400 neon-text">🔥 Game Lengkap</h3>
+                <p class="mt-2 max-w-xs text-sm text-gray-300">Explore koleksi game paling **HITS**! 🚀</p>
             </div>
         </div>
 
-        <!-- Game 2 -->
-        <div class="game-card">
-            <img src="./asset/fifa.jpg" alt="FIFA" class="game-img">
-            <div class="game-overlay">
-                <h3 class="text-xl font-semibold text-green-400">Harga Terjangkau</h3>
-                <p class="mt-2 max-w-xs">Nikmati bermain tanpa khawatir kantong jebol.</p>
+        <!-- Game Card 2 -->
+        <div class="group relative rounded-lg overflow-hidden shadow-lg border-2 border-green-400 hover:border-green-500 transition-all duration-500 card-glow">
+            <img src="./asset/fifa.jpg" alt="FIFA"
+                class="w-full h-64 object-cover transition-transform duration-500 group-hover:scale-110">
+            <div class="absolute inset-0 bg-black bg-opacity-70 flex flex-col items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+                <h3 class="text-xl font-semibold text-green-400 neon-text">💰 Harga Terjangkau</h3>
+                <p class="mt-2 max-w-xs text-sm text-gray-300">Bermain puas **tanpa bikin dompet nangis**! 🎯</p>
             </div>
         </div>
 
-        <!-- Game 3 -->
-        <div class="game-card">
-            <img src="./asset/god-of-war.jpg" alt="God of War" class="game-img">
-            <div class="game-overlay">
-                <h3 class="text-xl font-semibold text-blue-400">Nyaman & Seru</h3>
-                <p class="mt-2 max-w-xs">Ruang bermain nyaman dengan fasilitas terbaik.</p>
+        <!-- Game Card 3 -->
+        <div class="group relative rounded-lg overflow-hidden shadow-lg border-2 border-blue-400 hover:border-blue-500 transition-all duration-500 card-glow">
+            <img src="./asset/god-of-war.jpg" alt="God of War"
+                class="w-full h-64 object-cover transition-transform duration-500 group-hover:scale-110">
+            <div class="absolute inset-0 bg-black bg-opacity-70 flex flex-col items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+                <h3 class="text-xl font-semibold text-blue-400 neon-text">🎮 Nyaman & Seru</h3>
+                <p class="mt-2 max-w-xs text-sm text-gray-300">**Grafik super HD** & **Gameplay tanpa batas**! ⚡</p>
             </div>
         </div>
+        
     </div>
-
-    <!-- Efek Grid Background -->
-    <div class="absolute inset-0 bg-grid opacity-20"></div>
 </section>
 
- <!-- Event Turnamen -->
+
+
+
+
+
+<!-- Section: Gaming Setup -->
+<section id="gaming-setup" class="py-16 px-6 bg-gray-900 text-white">
+    <h2 class="text-3xl font-bold text-center text-blue-400 tracking-widest" style="font-family: 'Press Start 2P', cursive;">
+        🎮 Gaming Setup ⚡
+    </h2>
+
+    <div class="grid md:grid-cols-2 gap-8 mt-10">
+        <!-- TV Spec -->
+        <div class="bg-gray-800 p-6 rounded-xl shadow-lg transform transition hover:scale-105 relative group">
+            <div class="absolute -top-6 left-1/2 transform -translate-x-1/2 w-12 h-12 bg-blue-500 flex items-center justify-center rounded-full shadow-md group-hover:animate-pulse">
+                <i class="fas fa-tv text-white text-2xl"></i>
+            </div>
+            <h3 class="text-xl font-semibold text-blue-300 mt-6">🖥️ Gaming TV</h3>
+            <p class="mt-2 text-lg">Spesifikasi:</p>
+            <ul class="mt-2 text-sm text-gray-400 space-y-1">
+                <li>📺 <strong>Ukuran:</strong> 55" 4K HDR</li>
+                <li>⚡ <strong>Refresh Rate:</strong> 120Hz</li>
+                <li>🎮 <strong>Mode Gaming:</strong> Yes</li>
+                <li>🔌 <strong>Port:</strong> HDMI 2.1, USB 3.0</li>
+            </ul>
+            <p class="mt-4 text-lg font-bold text-yellow-400">Jumlah Unit: 3</p>
+        </div>
+
+        <!-- PS5 Spec -->
+        <div class="bg-gray-800 p-6 rounded-xl shadow-lg transform transition hover:scale-105 relative group">
+            <div class="absolute -top-6 left-1/2 transform -translate-x-1/2 w-12 h-12 bg-red-500 flex items-center justify-center rounded-full shadow-md group-hover:animate-pulse">
+                <i class="fas fa-gamepad text-white text-2xl"></i>
+            </div>
+            <h3 class="text-xl font-semibold text-red-300 mt-6">🎮 PlayStation 5</h3>
+            <p class="mt-2 text-lg">Spesifikasi:</p>
+            <ul class="mt-2 text-sm text-gray-400 space-y-1">
+                <li>💾 <strong>Storage:</strong> 825GB SSD</li>
+                <li>🧠 <strong>CPU:</strong> 8-Core AMD Ryzen</li>
+                <li>🎮 <strong>Controller:</strong> DualSense</li>
+                <li>🔌 <strong>Port:</strong> USB-C, HDMI</li>
+            </ul>
+            <p class="mt-4 text-lg font-bold text-yellow-400">Jumlah Unit: 5</p>
+        </div>
+    </div>
+</section>
+
+
+
+
+<!-- Event Turnamen -->
 <section id="event" class="py-16 px-6 bg-gray-900 text-white relative overflow-hidden">
     <h2 class="text-3xl font-bold text-center mb-10 text-red-500">
         ⚽🔥 Event Turnamen Sepak Bola 🏆⚡
     </h2>
+
     <div class="grid md:grid-cols-2 gap-8 text-center relative z-10">
-        <div class="event-card">
-            <h3 class="text-xl font-semibold text-yellow-400">FIFA 23 Championship</h3>
-            <p class="mt-2 text-lg">Buktikan skillmu dan menangkan hadiah jutaan rupiah!</p>
-            <p class="mt-2 text-sm text-gray-400">Tanggal: 25 Maret 2025</p>
-            <a href="#daftar" class="neon-button">Daftar Sekarang</a>
+        <!-- FIFA 23 Championship -->
+        <div class="relative bg-gray-800 p-6 rounded-xl shadow-lg transform transition duration-300 hover:scale-105 hover:shadow-2xl 
+            bg-cover bg-center" style="background-image: url('./asset/fifa.jpg');">
+            <div class="absolute inset-0 bg-black bg-opacity-60 rounded-xl"></div>
+            <div class="relative z-10">
+                <h3 class="text-xl font-semibold text-yellow-400">FIFA 23 Championship</h3>
+                <p class="mt-2 text-lg">Buktikan skillmu dan menangkan hadiah jutaan rupiah!</p>
+                <p class="mt-2 text-sm text-gray-400 animate-pulse">📅 25 Maret 2025</p>
+                <a href="#daftar" class="mt-4 inline-block px-5 py-2 text-sm font-semibold text-white bg-yellow-500 rounded-lg transition hover:bg-yellow-600 shadow-lg hover:shadow-yellow-400">
+                    Daftar Sekarang
+                </a>
+            </div>
         </div>
-        <div class="event-card">
-            <h3 class="text-xl font-semibold text-green-400">PES 2024 Tournament</h3>
-            <p class="mt-2 text-lg">Tantang lawan-lawan terbaik dan raih gelar juara!</p>
-            <p class="mt-2 text-sm text-gray-400">Tanggal: 10 April 2025</p>
-            <a href="#daftar" class="neon-button">Daftar Sekarang</a>
+
+        <!-- PES 2024 Tournament -->
+        <div class="relative bg-gray-800 p-6 rounded-xl shadow-lg transform transition duration-300 hover:scale-105 hover:shadow-2xl 
+            bg-cover bg-center" style="background-image: url('./asset/fifa.jpg');">
+            <div class="absolute inset-0 bg-black bg-opacity-60 rounded-xl"></div>
+            <div class="relative z-10">
+                <h3 class="text-xl font-semibold text-green-400">PES 2024 Tournament</h3>
+                <p class="mt-2 text-lg">Tantang lawan-lawan terbaik dan raih gelar juara!</p>
+                <p class="mt-2 text-sm text-gray-400 animate-pulse">📅 10 April 2025</p>
+                <a href="#daftar" class="mt-4 inline-block px-5 py-2 text-sm font-semibold text-white bg-green-500 rounded-lg transition hover:bg-green-600 shadow-lg hover:shadow-green-400">
+                    Daftar Sekarang
+                </a>
+            </div>
         </div>
     </div>
 </section>
 
+
+
     
 <!-- Paket Harga -->
 <section id="harga" class="py-16 px-6 bg-black bg-opacity-60 relative overflow-hidden">
-    <!-- Judul dengan efek glitch -->
+    <!-- Judul -->
     <h2 class="text-4xl font-bold text-center mb-12 text-transparent bg-clip-text bg-gradient-to-r from-yellow-400 via-red-500 to-purple-600 animate-pulse">
         💰 Paket Harga
     </h2>
 
     <div class="grid md:grid-cols-3 gap-8 text-center relative z-10">
-        <!-- Kartu Harga 1 Jam -->
-        <div class="price-card">
+        <!-- Kartu Harga -->
+        <div class="bg-gray-800 p-6 rounded-xl shadow-lg transform transition duration-300 hover:scale-105 hover:shadow-2xl">
             <i class="fas fa-clock text-4xl text-yellow-400"></i>
             <h3 class="text-xl font-semibold text-yellow-400 mt-4">1 Jam</h3>
             <p class="mt-2 text-3xl font-bold text-white">Rp5.000</p>
         </div>
         
-        <!-- Kartu Harga 3 Jam -->
-        <div class="price-card">
+        <div class="bg-gray-800 p-6 rounded-xl shadow-lg transform transition duration-300 hover:scale-105 hover:shadow-2xl">
             <i class="fas fa-stopwatch text-4xl text-red-400"></i>
             <h3 class="text-xl font-semibold text-red-400 mt-4">3 Jam</h3>
             <p class="mt-2 text-3xl font-bold text-white">Rp12.000</p>
         </div>
 
-        <!-- Kartu Harga Harian -->
-        <div class="price-card">
+        <div class="bg-gray-800 p-6 rounded-xl shadow-lg transform transition duration-300 hover:scale-105 hover:shadow-2xl">
             <i class="fas fa-calendar-alt text-4xl text-purple-400"></i>
             <h3 class="text-xl font-semibold text-purple-400 mt-4">Harian</h3>
             <p class="mt-2 text-3xl font-bold text-white">Rp50.000</p>
@@ -371,18 +288,20 @@
     <!-- Efek Grid Background -->
     <div class="absolute inset-0 bg-grid opacity-20"></div>
 </section>
+
     
-  <!-- Kontak & Lokasi -->
-<section id="kontak" class="py-16 px-6 text-center bg-gradient-to-r from-black via-gray-900 to-black bg-opacity-80 text-white">
+<!-- Kontak & Lokasi -->
+<section id="kontak" class="py-16 px-6 text-center bg-gradient-to-r from-black via-gray-900 to-black text-white">
     <h2 class="text-4xl font-extrabold mb-6 text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-blue-500 drop-shadow-lg">
         📍 Hubungi Kami
     </h2>
-    <p class="text-lg mb-2 font-light">📍 <span class="font-semibold">Lokasi:</span> Jl. Irigasi tegal kadu No.kp, Sirnajaya, Kec. Serang Baru, Kabupaten Bekasi, Jawa Barat</p>
-    <p class="text-lg mb-6 font-light">📞 <span class="font-semibold">WhatsApp:</span> 089665735482</p>
-    
+
+    <p class="text-lg font-light">📍 <span class="font-semibold">Lokasi:</span> Jl. Irigasi Tegal Kadu No.Kp, Indonesia</p>
+    <p class="text-lg font-light mb-6">📞 <span class="font-semibold">WhatsApp:</span> 08xxxxxx</p>
+
     <!-- Tombol WhatsApp -->
-    <a href="https://wa.me/6289665735482" target="_blank" 
-       class="inline-flex items-center space-x-2 bg-green-600 px-6 py-3 rounded-lg text-lg font-semibold text-white hover:bg-green-500 transition-transform transform hover:scale-105 shadow-lg">
+    <a href="https://wa.me/628xxxxxxx" target="_blank"
+       class="inline-flex items-center space-x-2 bg-green-600 px-6 py-3 rounded-lg text-lg font-semibold text-white shadow-lg transform transition duration-300 hover:bg-green-500 hover:scale-105 active:scale-95">
         <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
             <path d="M20.52 3.48A11.94 11.94 0 0 0 12 0C5.37 0 0 5.37 0 12c0 2.12.55 4.18 1.58 6L0 24l6-1.58c1.81 1 3.87 1.58 6 1.58 6.63 0 12-5.37 12-12 0-2.12-.55-4.18-1.58-6ZM12 22c-1.78 0-3.54-.48-5.06-1.38l-.36-.21-3.55.94.94-3.55-.21-.36A9.99 9.99 0 0 1 2 12a10 10 0 1 1 10 10Zm5.49-7.64c-.3-.15-1.77-.87-2.04-.97-.27-.1-.47-.15-.66.15-.2.29-.76.97-.94 1.17-.17.2-.35.22-.65.07-.3-.15-1.27-.47-2.42-1.5a9.16 9.16 0 0 1-1.7-2.08c-.18-.3 0-.46.14-.62.15-.15.3-.35.46-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.07-.15-.66-1.58-.91-2.16-.24-.58-.49-.5-.66-.5h-.55c-.2 0-.52.07-.8.37-.27.3-1.05 1.03-1.05 2.5s1.08 2.9 1.23 3.1c.15.2 2.11 3.22 5.11 4.52 3 .92 3 .62 3.55.57.55-.05 1.77-.72 2.02-1.42.25-.7.25-1.3.17-1.42-.07-.1-.25-.17-.55-.32Z"/>
         </svg>
@@ -391,55 +310,336 @@
 </section>
 
 
-      <!-- Footer -->
-      <footer class="bg-gray-900 text-gray-400 text-center p-6 mt-6">
-        <p>&copy; 2025 Mardiyana Tech Studio. Semua Hak Dilindungi.</p>
-    </footer>
-    <script>
-          const menuBtn = document.getElementById('menu-btn');
-    const mobileMenu = document.getElementById('mobile-menu');
 
-    menuBtn.addEventListener('click', () => {
-        mobileMenu.classList.toggle('hidden');
-        mobileMenu.classList.toggle('-translate-y-full');
-    });
-        document.addEventListener("DOMContentLoaded", function () {
-            let eventSection = document.getElementById("event");
-            let observer = new IntersectionObserver(
-                function (entries) {
-                    if (entries[0].isIntersecting) {
-                        eventSection.classList.add("show");
-                    }
-                },
-                { threshold: 0.3 }
-            );
-            observer.observe(eventSection);
-        });
-        document.addEventListener("DOMContentLoaded", function () {
-    let hargaSection = document.getElementById("harga");
-    let observer = new IntersectionObserver(
-        function (entries) {
-            if (entries[0].isIntersecting) {
-                hargaSection.classList.add("show");
-            }
-        },
-        { threshold: 0.3 }
-    );
-    observer.observe(hargaSection);
-});
+      <!-- Footer -->
+<footer class="bg-gray-900 text-gray-400 text-center p-6 mt-6">
+    <p>&copy; 2025 Mardiyana Tech Studio. Semua Hak Dilindungi.</p>
+</footer>
+
+<script>
 document.addEventListener("DOMContentLoaded", function () {
-    let fiturSection = document.getElementById("fitur");
-    let observer = new IntersectionObserver(
-        function (entries) {
-            if (entries[0].isIntersecting) {
-                fiturSection.classList.add("show");
-            }
+    const heroSection = document.getElementById("hero");
+    const heroParticles = document.getElementById("hero-particles");
+
+    // Efek Parallax yang lebih ringan
+    window.addEventListener("scroll", function () {
+        let scrollPos = window.scrollY * 0.1;
+        heroSection.style.backgroundPosition = `center ${scrollPos}px`;
+    });
+
+    // Efek Partikel Cahaya Lebih Hemat
+    function createParticle() {
+        if (heroParticles.childElementCount > 10) return; // Batasi jumlah partikel
+
+        const particle = document.createElement("div");
+        particle.classList.add("particle");
+        particle.style.left = `${Math.random() * 100}%`;
+        particle.style.top = `${Math.random() * 100}%`;
+        heroParticles.appendChild(particle);
+
+        setTimeout(() => {
+            particle.remove();
+        }, 3000);
+    }
+    setInterval(createParticle, 1000); // Kurangi intensitas jadi lebih santai
+});
+
+
+
+document.addEventListener("DOMContentLoaded", function () {
+    // Mengambil elemen yang ada di dalam section fitur saja
+    const fiturSection = document.getElementById("fitur");
+    const gameCards = fiturSection.querySelectorAll(".group");
+
+    // Efek Scroll (Fade-in dengan delay acak & scale-up)
+    const observer = new IntersectionObserver(
+        (entries) => {
+            entries.forEach((entry) => {
+                if (entry.isIntersecting) {
+                    const delay = Math.random() * 500; // Delay acak untuk efek lebih dinamis
+                    setTimeout(() => {
+                        entry.target.classList.add("opacity-100", "translate-y-0", "scale-100");
+                    }, delay);
+                }
+            });
         },
         { threshold: 0.3 }
     );
-    observer.observe(fiturSection);
+
+    gameCards.forEach((card) => {
+        card.classList.add("opacity-0", "translate-y-10", "scale-90", "transition-all", "duration-700", "floating");
+        observer.observe(card);
+    });
+
+    // Efek Floating pada Gambar (lebih smooth dengan Math.sin)
+    fiturSection.querySelectorAll("img").forEach((img) => {
+        let position = 0;
+        let direction = Math.random() * 2 + 1; // Variasi kecepatan tiap gambar
+        let frame = 0;
+
+        function floatingEffect() {
+            position = Math.sin(frame / 20) * 3; // Gerakan naik-turun halus
+            img.style.transform = `translateY(${position}px)`;
+            frame++;
+            requestAnimationFrame(floatingEffect);
+        }
+
+        floatingEffect();
+    });
+
+    // Efek Flicker Neon pada Border saat Hover
+    gameCards.forEach((card) => {
+        card.addEventListener("mouseenter", () => {
+            card.classList.add("flicker");
+        });
+        card.addEventListener("mouseleave", () => {
+            card.classList.remove("flicker");
+        });
+    });
+
+    // Efek Hover Lebih Menonjol (Zoom dan Glow)
+    gameCards.forEach((card) => {
+        card.addEventListener("mouseenter", () => {
+            card.style.transform = "scale(1.05)";
+            card.style.boxShadow = "0 0 15px rgba(255, 255, 255, 0.8)";
+        });
+        card.addEventListener("mouseleave", () => {
+            card.style.transform = "scale(1)";
+            card.style.boxShadow = "0 0 10px rgba(255, 255, 255, 0.2)";
+        });
+    });
+
+    // Efek Glitch pada Judul
+    const glitchTitle = document.querySelector("#fitur h2");
+    if (glitchTitle) {
+        setInterval(() => {
+            const skewX = Math.random() * 10 - 5;
+            const offsetX = Math.random() * 5 - 2.5;
+            const offsetY = Math.random() * 5 - 2.5;
+            const colors = ["#ff0000", "#00ff00", "#0000ff", "#ff00ff", "#ffff00"];
+            const neonColor = colors[Math.floor(Math.random() * colors.length)];
+
+            glitchTitle.style.transform = `skewX(${skewX}deg) translate(${offsetX}px, ${offsetY}px)`;
+            glitchTitle.style.textShadow = `${offsetX}px ${offsetY}px 8px ${neonColor}`;
+
+            // Efek "glitch jump" yang lebih dramatis sesekali
+            if (Math.random() > 0.85) {
+                glitchTitle.style.transform += " scale(1.05)";
+                setTimeout(() => glitchTitle.style.transform = "", 100);
+            }
+        }, 400);
+    }
 });
-        </script>
+
+
+document.addEventListener("DOMContentLoaded", function () {
+    const gamingSetup = document.getElementById("gaming-setup");
+
+    if (!gamingSetup) return; // Pastikan elemen ada sebelum menjalankan script
+
+    // Efek Glitch untuk Judul
+    const title = gamingSetup.querySelector("h2");
+    if (title) {
+        setInterval(() => {
+            title.style.textShadow = `
+                ${Math.random() * 4 - 2}px ${Math.random() * 4 - 2}px 0 #ff0000,
+                ${Math.random() * 4 - 2}px ${Math.random() * 4 - 2}px 0 #00ff00,
+                ${Math.random() * 4 - 2}px ${Math.random() * 4 - 2}px 0 #0000ff
+            `;
+            title.style.transform = `skewX(${Math.random() * 4 - 2}deg)`;
+        }, 200);
+    }
+
+    // Efek Hover Floating pada Card
+    const gamingCards = gamingSetup.querySelectorAll(".group");
+    gamingCards.forEach((card) => {
+        card.addEventListener("mouseenter", () => {
+            card.style.transform = "translateY(-5px) scale(1.05)";
+            card.style.boxShadow = "0 0 15px rgba(0, 255, 255, 0.8)";
+            card.style.transition = "transform 0.3s ease, box-shadow 0.3s ease";
+        });
+
+        card.addEventListener("mouseleave", () => {
+            card.style.transform = "translateY(0) scale(1)";
+            card.style.boxShadow = "none";
+        });
+    });
+
+    // Efek Neon Berkedip pada Ikon
+    const icons = gamingSetup.querySelectorAll(".group .absolute");
+    icons.forEach((iconContainer) => {
+        setInterval(() => {
+            iconContainer.classList.toggle("opacity-50");
+        }, 700);
+    });
+
+    // Efek Floating yang Smooth untuk Gambar
+    gamingSetup.querySelectorAll("img").forEach((img) => {
+        let position = 0;
+        let direction = 1;
+
+        function floatingEffect() {
+            position += 0.5 * direction;
+            img.style.transform = `translateY(${position}px)`;
+
+            if (position >= 3 || position <= -3) {
+                direction *= -1;
+            }
+
+            requestAnimationFrame(floatingEffect);
+        }
+
+        floatingEffect();
+    });
+});
+
+
+document.addEventListener("DOMContentLoaded", function () {
+    const eventSection = document.getElementById("event");
+    if (!eventSection) return;
+
+    // 🎇 Efek Glitch Neon di Judul
+    const title = eventSection.querySelector("h2");
+    setInterval(() => {
+        title.classList.toggle("text-yellow-400");
+        title.classList.toggle("text-red-500");
+        title.classList.toggle("drop-shadow-[0_0_15px_#ff0000]");
+    }, 300);
+
+    // 🌟 Efek Background Bergerak
+    eventSection.style.position = "relative";
+    const bgEffect = document.createElement("div");
+    bgEffect.className = "absolute inset-0 opacity-20";
+    bgEffect.style.background = "url('./asset/fifa.jpg')";
+    bgEffect.style.animation = "moveBackground 10s linear infinite";
+    eventSection.appendChild(bgEffect);
+
+    // 🕶 Efek Scanline & Glitch pada Kartu Event
+    const eventCards = eventSection.querySelectorAll(".relative.bg-gray-800");
+    const observer = new IntersectionObserver(
+        (entries) => {
+            entries.forEach((entry, index) => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add("opacity-100", "translate-y-0");
+                    entry.target.style.transitionDelay = `${index * 150}ms`;
+                }
+            });
+        },
+        { threshold: 0.2 }
+    );
+
+    eventCards.forEach((card) => {
+        card.classList.add(
+            "opacity-0", "translate-y-10", "transition-all", "duration-700"
+        );
+        observer.observe(card);
+
+        // 🔥 Efek Glitch
+        const glitchEffect = document.createElement("div");
+        glitchEffect.className =
+            "absolute inset-0 bg-gradient-to-t from-transparent to-gray-800 opacity-20 animate-scanline";
+        card.appendChild(glitchEffect);
+    });
+
+    // ⚡ Efek Tombol Hover (Listrik Kilat)
+    const buttons = eventSection.querySelectorAll("a");
+    buttons.forEach((button) => {
+        button.addEventListener("mouseover", () => {
+            button.classList.add("animate-glitch");
+        });
+
+        button.addEventListener("mouseleave", () => {
+            button.classList.remove("animate-glitch");
+        });
+    });
+
+    // 🎆 Efek Kilatan Tanggal Event
+    const dates = eventSection.querySelectorAll("p.text-sm");
+    dates.forEach((date) => {
+        setInterval(() => {
+            date.classList.toggle("text-white");
+            date.classList.toggle("text-gray-400");
+            date.classList.toggle("drop-shadow-[0_0_10px_#ffffff]");
+        }, 800);
+    });
+});
+
+
+document.addEventListener("DOMContentLoaded", function () {
+    const hargaSection = document.getElementById("harga");
+    const hargaCards = hargaSection.querySelectorAll(".bg-gray-800");
+    const hargaTitle = hargaSection.querySelector("h2");
+    const gridBackground = hargaSection.querySelector(".bg-grid");
+
+    // Efek Scroll (Fade-in + Scale-up)
+    const observer = new IntersectionObserver(
+        (entries) => {
+            entries.forEach((entry) => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add("opacity-100", "translate-y-0", "scale-100");
+                }
+            });
+        },
+        { threshold: 0.3 }
+    );
+
+    hargaCards.forEach((card) => {
+        card.classList.add("opacity-0", "translate-y-10", "scale-90", "transition-all", "duration-700");
+        observer.observe(card);
+    });
+
+    // Efek Hover (Neon Glow)
+    hargaCards.forEach((card) => {
+        card.addEventListener("mouseenter", () => {
+            card.style.boxShadow = "0 0 20px rgba(255, 255, 255, 0.8)";
+            card.style.transform = "scale(1.1)";
+        });
+        card.addEventListener("mouseleave", () => {
+            card.style.boxShadow = "0 0 10px rgba(255, 255, 255, 0.3)";
+            card.style.transform = "scale(1)";
+        });
+    });
+
+    // Efek Flicker pada Judul (Neon Glow)
+    setInterval(() => {
+        const colors = ["#ff0000", "#00ff00", "#0000ff", "#ff00ff", "#ffff00"];
+        const neonColor = colors[Math.floor(Math.random() * colors.length)];
+        hargaTitle.style.textShadow = `0 0 10px ${neonColor}, 0 0 20px ${neonColor}`;
+    }, 500);
+
+    // Efek Grid Background Bergerak
+    let posX = 0;
+    let posY = 0;
+    function animateGrid() {
+        posX += 0.2;
+        posY += 0.2;
+        gridBackground.style.backgroundPosition = `${posX}px ${posY}px`;
+        requestAnimationFrame(animateGrid);
+    }
+    animateGrid();
+});
+
+
+document.addEventListener("DOMContentLoaded", function () {
+    const menuBtn = document.getElementById("menu-btn");
+    const mobileMenu = document.getElementById("mobile-menu");
+
+    menuBtn.addEventListener("click", () => {
+        mobileMenu.classList.toggle("hidden");
+        mobileMenu.classList.toggle("opacity-100");
+        mobileMenu.classList.toggle("translate-y-0");
+    });
+
+    // Menutup menu saat klik di luar area menu
+    document.addEventListener("click", (e) => {
+        if (!menuBtn.contains(e.target) && !mobileMenu.contains(e.target)) {
+            mobileMenu.classList.add("hidden");
+            mobileMenu.classList.remove("opacity-100", "translate-y-0");
+        }
+    });
+});
+
+</script>
 
 </body>
 </html>
