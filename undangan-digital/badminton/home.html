@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Undangan Kompetisi</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 font-sans">
+    
+    <!-- HEADER -->
+    <header class="fixed top-0 left-0 w-full bg-gradient-to-r from-blue-900 via-purple-700 to-red-600 
+                   text-white text-center p-4 shadow-lg backdrop-blur-md z-50">
+        <h1 class="text-xl md:text-3xl font-bold uppercase tracking-widest">Piala Kompetisi Bulu Tangkis 2025</h1>
+    </header>
+
+   <!-- MAIN CONTENT -->
+   <main class="grid grid-cols-1 md:grid-cols-2 gap-6 p-6 min-h-screen relative text-white 
+   bg-gradient-to-br from-blue-900 via-purple-700 to-red-600 bg-fixed backdrop-blur-md 
+   pt-20 md:pt-24"
+   style="
+       background-image: url('./asset/badminton.jpg'); 
+       background-size: auto 100%;  
+       background-repeat: repeat-x;
+   ">     
+
+<!-- Hero Section -->
+<section id="hero" class="overflow-hidden min-h-[calc(100vh-64px)] flex justify-center items-center relative p-4 bg-gradient-to-r from-blue-800 via-purple-700 to-red-600 text-white">
+    <div id="heroGrid" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 w-full max-w-6xl min-h-[calc(100vh-70px)] relative">
+        <!-- Card 1 -->
+        <div class="absolute top-10 left-10 bg-yellow-500 p-6 rounded-xl shadow-xl w-56 h-64 flex flex-col justify-between transform hover:scale-105 transition duration-300">
+            <h3 class="text-xl font-bold">Basketball Cup</h3>
+            <p class="text-sm">Kompetisi seru antar tim terbaik!</p>
+            <button class="bg-white text-yellow-600 px-4 py-2 rounded-lg mt-2 hover:bg-yellow-700 hover:text-white transition">Daftar</button>
+        </div>
+        
+        <!-- Card 2 -->
+        <div class="absolute top-20 right-10 bg-green-500 p-6 rounded-xl shadow-xl w-56 h-64 flex flex-col justify-between transform hover:scale-105 transition duration-300">
+            <h3 class="text-xl font-bold">Soccer Championship</h3>
+            <p class="text-sm">Adu strategi di lapangan hijau!</p>
+            <button class="bg-white text-green-600 px-4 py-2 rounded-lg mt-2 hover:bg-green-700 hover:text-white transition">Daftar</button>
+        </div>
+        
+        <!-- Card 3 -->
+        <div class="absolute bottom-10 left-1/2 transform -translate-x-1/2 bg-red-500 p-6 rounded-xl shadow-xl w-56 h-64 flex flex-col justify-between transform hover:scale-105 transition duration-300">
+            <h3 class="text-xl font-bold">Badminton Open</h3>
+            <p class="text-sm">Smash dan taklukkan lawan!</p>
+            <button class="bg-white text-red-600 px-4 py-2 rounded-lg mt-2 hover:bg-red-700 hover:text-white transition">Daftar</button>
+        </div>
+    </div>
+</section>
+
+
+
+<!-- Section Undangan & Info di kanan -->
+<section class="flex flex-col justify-center items-center text-center space-y-6 p-6">
+    <!-- Section Undangan -->
+    <div class="p-10 bg-gradient-to-r from-red-500 via-orange-500 to-yellow-500 text-white shadow-lg w-full max-w-2xl rounded-xl transform transition-all duration-500 hover:scale-105">
+        <h3 class="text-2xl font-bold uppercase tracking-wide drop-shadow-md">Kepada:</h3>
+        <p class="text-yellow-200 font-semibold text-xl">Riki Santo</p>
+        <p class="text-lg text-white mt-4 max-w-2xl leading-relaxed drop-shadow-sm">
+            Dengan bangga kami mengundang Anda untuk berpartisipasi dalam kompetisi bulu tangkis tahun ini! Bergabunglah dan tunjukkan keahlian terbaik Anda.
+        </p>
+    </div>
+
+<!-- Section Info & Button -->
+<div class="p-10 bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 text-white shadow-lg w-full max-w-2xl rounded-xl transform transition-all duration-500 hover:scale-105">
+    <div class="text-lg space-y-4 drop-shadow-md">
+        <p><strong>📅 Tanggal:</strong> <span id="tournamentDate">15 Agustus 2025</span></p>
+        <p><strong>📍 Lokasi:</strong> <span id="tournamentLocation">Jakarta Convention Center</span></p>
+    </div>
+    <button id="registerButton" class="mt-8 bg-white text-blue-600 px-8 py-4 rounded-lg hover:bg-gray-200 transition text-xl font-semibold shadow-md hover:shadow-lg">
+        Daftar Sekarang
+    </button>
+</div>
+<!-- Tempat Form (akan di-generate dengan JavaScript) -->
+<div id="formContainer"></div>
+
+</section>
+
+</main>
+
+
+    <!-- FOOTER -->
+    <footer class="text-center py-6 text-white bg-gradient-to-r from-blue-900 via-purple-700 to-red-600 
+                    shadow-inner mt-6 backdrop-blur-md">
+        &copy; 2025 Kompetisi Bulu Tangkis | All Rights Reserved.
+    </footer>
+    <script>
+        const heroSlides = [
+            { title: "Piala Kompetisi", text: "Bulu Tangkis 2025", image: "./asset/bm1.jpg", bg: "bg-gradient-to-r from-yellow-500 to-orange-600" },
+            { title: "Juara Bertahan", text: "Siap Jadi Pemenang?", image: "./asset/bm2.jpg", bg: "bg-gradient-to-r from-green-500 to-teal-600" },
+            { title: "Ayo Bertanding!", text: "Tunjukkan Kemampuanmu", image: "./asset/bm3.jpg", bg: "bg-gradient-to-r from-red-500 to-pink-600" },
+            { title: "Siap Juara?", text: "Ambil Kesempatanmu", image: "./asset/bm4.jpg", bg: "bg-gradient-to-r from-blue-500 to-purple-600" }
+        ];
+    
+        let currentIndex = 0;
+        let isMobileView = window.innerWidth < 640;
+    
+        function createHeroCards() {
+            const heroGrid = document.getElementById("heroGrid");
+            heroGrid.innerHTML = "";
+    
+            heroSlides.forEach((slide, index) => {
+                const card = document.createElement("div");
+                card.id = `heroContainer${index}`;
+                card.className = `hero-card opacity-0 transform transition-all duration-1000 ease-out scale-95 translate-y-10 
+                                  ${slide.bg} p-6 rounded-xl shadow-lg flex flex-col items-center text-center gap-3`;
+                
+                if (isMobileView) {
+                    card.classList.add("hidden");
+                }
+    
+                card.innerHTML = `
+                    <h2 class="text-lg sm:text-xl font-bold uppercase tracking-wide drop-shadow-lg" style="font-family: 'Oswald', sans-serif;">
+                        ${slide.title}
+                    </h2>
+                    <p class="text-sm sm:text-base drop-shadow-md mt-2" style="font-family: 'Poppins', sans-serif;">
+                        ${slide.text}
+                    </p>
+                    <div class="w-full h-48 sm:h-56 md:h-64 flex justify-center items-center">
+                        <img src="${slide.image}" alt="Icon" class="w-full h-full object-cover rounded-lg shadow-lg">
+                    </div>
+                `;
+    
+                heroGrid.appendChild(card);
+            });
+    
+            if (isMobileView) {
+                document.getElementById("heroContainer0").classList.remove("hidden");
+                document.getElementById("heroContainer0").classList.add("opacity-100", "scale-100", "translate-y-0");
+            }
+        }
+    
+        function showHeroCards() {
+            if (isMobileView) return;
+    
+            heroSlides.forEach((_, index) => {
+                setTimeout(() => {
+                    const card = document.getElementById(`heroContainer${index}`);
+                    card.classList.remove("opacity-0", "scale-95", "translate-y-10");
+                    card.classList.add("opacity-100", "scale-100", "translate-y-0");
+                }, index * 300);
+            });
+        }
+    
+        function cycleHeroCards() {
+            if (!isMobileView) return;
+    
+            heroSlides.forEach((_, index) => {
+                setTimeout(() => {
+                    const card = document.getElementById(`heroContainer${index}`);
+                    card.classList.add("opacity-0", "scale-95", "translate-y-10");
+                }, index * 200);
+            });
+    
+            setTimeout(() => {
+                showHeroCards();
+            }, 1000);
+        }
+    
+        function updateHeroCarousel() {
+            if (!isMobileView) return;
+    
+            const heroCards = document.querySelectorAll(".hero-card");
+            heroCards.forEach((card) => card.classList.add("hidden"));
+    
+            heroCards[currentIndex].classList.remove("hidden");
+            heroCards[currentIndex].classList.add("opacity-100", "scale-100", "translate-y-0");
+    
+            currentIndex = (currentIndex + 1) % heroSlides.length;
+        }
+    
+        window.addEventListener("resize", () => {
+            const newMobileView = window.innerWidth < 640;
+            if (newMobileView !== isMobileView) {
+                isMobileView = newMobileView;
+                createHeroCards();
+            }
+        });
+    
+        createHeroCards();
+        setTimeout(showHeroCards, 300);
+        setInterval(cycleHeroCards, 6000);
+        setInterval(updateHeroCarousel, 3000);
+
+        document.getElementById("registerButton").addEventListener("click", function () {
+        const formContainer = document.getElementById("formContainer");
+
+        // Cek apakah form sudah ada
+        if (!document.getElementById("tournamentForm")) {
+            formContainer.innerHTML = `
+                <div class="p-6 mt-6 bg-white text-gray-800 shadow-lg w-full max-w-2xl rounded-xl">
+                    <h2 class="text-2xl font-bold mb-4">Formulir Pendaftaran</h2>
+                    <form id="tournamentForm" class="space-y-4">
+                        <div>
+                            <label class="block text-lg">Nama Tim</label>
+                            <input type="text" id="fullName" class="w-full p-2 border rounded text-gray-800" required>
+                        </div>
+                        <div>
+                            <label class="block text-lg">Email</label>
+                            <input type="email" id="email" class="w-full p-2 border rounded text-gray-800" required>
+                        </div>
+                        <div>
+                            <label class="block text-lg">Nomor WhatsApp</label>
+                            <input type="tel" id="phone" class="w-full p-2 border rounded text-gray-800" required>
+                        </div>
+                        <button type="submit" class="mt-4 bg-blue-600 text-white px-6 py-2 rounded-lg hover:bg-blue-700 transition text-lg font-semibold shadow-md hover:shadow-lg">
+                            Kirim Pendaftaran
+                        </button>
+                    </form>
+                </div>
+            `;
+
+            // Tambahkan event listener ke form baru
+            document.getElementById("tournamentForm").addEventListener("submit", function(event) {
+                event.preventDefault();
+
+                const fullName = document.getElementById("fullName").value.trim();
+                const email = document.getElementById("email").value.trim();
+                const phone = document.getElementById("phone").value.trim();
+
+                if (!fullName || !email || !phone) {
+                    alert("Harap isi semua data sebelum mendaftar!");
+                    return;
+                }
+
+                const { jsPDF } = window.jspdf;
+                const doc = new jsPDF();
+
+                const tournamentData = {
+                    date: document.getElementById("tournamentDate").innerText,
+                    location: document.getElementById("tournamentLocation").innerText,
+                    eventName: "Kompetisi Bulu Tangkis 2025",
+                    organizer: "Mardiyana Tech Studio",
+                    contact: "+6281234567890",
+                    userName: fullName,
+                    userEmail: email,
+                    userPhone: phone
+                };
+
+                // Generate PDF
+                doc.setFont("helvetica", "bold");
+                doc.setFontSize(18);
+                doc.text(tournamentData.eventName, 20, 20);
+
+                doc.setFontSize(14);
+                doc.text(`📅 Tanggal: ${tournamentData.date}`, 20, 40);
+                doc.text(`📍 Lokasi: ${tournamentData.location}`, 20, 50);
+                doc.text(`📢 Penyelenggara: ${tournamentData.organizer}`, 20, 60);
+                doc.text(`📞 Kontak: ${tournamentData.contact}`, 20, 70);
+                
+                doc.text(`👤 Nama: ${tournamentData.userName}`, 20, 90);
+                doc.text(`📧 Email: ${tournamentData.userEmail}`, 20, 100);
+                doc.text(`📱 WhatsApp: ${tournamentData.userPhone}`, 20, 110);
+
+                const pdfFileName = "Pendaftaran_Turnamen.pdf";
+                doc.save(pdfFileName);
+
+                // Kirim ke WhatsApp
+                const message = `Halo! Saya telah mendaftar turnamen:\n\n` +
+                    `📅 *Tanggal:* ${tournamentData.date}\n` +
+                    `📍 *Lokasi:* ${tournamentData.location}\n` +
+                    `📢 *Penyelenggara:* ${tournamentData.organizer}\n\n` +
+                    `👤 *Nama:* ${tournamentData.userName}\n` +
+                    `📧 *Email:* ${tournamentData.userEmail}\n` +
+                    `📱 *WhatsApp:* ${tournamentData.userPhone}\n\n` +
+                    `Silakan cek undangan dalam file PDF yang telah saya lampirkan.`;
+
+                const waLink = `https://wa.me/${tournamentData.contact.replace(/[^0-9]/g, '')}?text=${encodeURIComponent(message)}`;
+                window.open(waLink, "_blank");
+
+                // Sembunyikan form setelah selesai
+                formContainer.innerHTML = "";
+            });
+        }
+    });
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+
+</body>
+</html>
