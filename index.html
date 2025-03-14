@@ -134,23 +134,46 @@
     </section>
     
     <!-- Portfolio -->
-    <section id="projects" class="py-16 bg-gray-800 text-center">
-        <h3 class="text-3xl font-bold">Website</h3>
-        <div class="grid md:grid-cols-3 gap-6 mt-6 px-6">
+<section id="projects" class="py-16 bg-gray-800 text-center">
+    <h3 class="text-3xl font-bold text-white">Website</h3>
+
+    <!-- Kategori Mockup Website Ori -->
+    <div class="mt-8">
+        <h4 class="text-2xl font-semibold text-gray-300">Template Original</h4>
+        <div class="grid md:grid-cols-3 gap-6 mt-4 px-6">
             <div id="lp" class="p-6 bg-gray-700 shadow-lg rounded-lg transform hover:scale-105 transition">
-                <img src="screenshot-landing-page-2.jpg" onerror="this.src='https://placehold.co/300x200?text=No+Image'" alt="Project 1" class="w-full rounded-lg">
-                <h4 class="font-semibold mt-4">Landing - Page</h4>
+                <img src="./asset/landing-page/etaSeblak/etaSeblak.png" onerror="this.src='https://placehold.co/300x200?text=No+Image'" alt="Landing Page" class="w-full rounded-lg">
+                <h4 class="font-semibold mt-4 text-white">Landing - Page</h4>
             </div>
             <div id="ud" class="p-6 bg-gray-700 shadow-lg rounded-lg transform hover:scale-105 transition">
-                <img src="./asset/undangan-digital/bmEvent/bmEvent.png" onerror="this.src='https://placehold.co/300x200?text=No+Image'" alt="Project 2" class="w-full rounded-lg">
-                <h4 class="font-semibold mt-4">Undangan - Digital</h4>
+                <img src="./asset/undangan-digital/bmEvent/bmEvent.png" onerror="this.src='https://placehold.co/300x200?text=No+Image'" alt="Undangan Digital" class="w-full rounded-lg">
+                <h4 class="font-semibold mt-4 text-white">Undangan - Digital</h4>
             </div>
             <div id="cw" class="p-6 bg-gray-700 shadow-lg rounded-lg transform hover:scale-105 transition">
-                <img src="./asset/custom-web/playstation/playstation.png" onerror="this.src='https://placehold.co/300x200?text=No+Image'" alt="Project 3" class="w-full rounded-lg">
-                <h4 class="font-semibold mt-4">Custom - Website</h4>
+                <img src="./asset/custom-web/playstation/playstation.png" onerror="this.src='https://placehold.co/300x200?text=No+Image'" alt="Custom Website" class="w-full rounded-lg">
+                <h4 class="font-semibold mt-4 text-white">Custom - Website</h4>
             </div>
         </div>
-    </section>
+    </div>
+
+<!-- Kategori Optimasi Wix & WordPress -->
+<div class="mt-8">
+    <h4 class="text-2xl font-semibold text-gray-300">Optimasi & Setup</h4>
+    <div class="grid md:grid-cols-2 gap-6 mt-4 px-6">
+        <div id="op" class="p-6 bg-gray-700 shadow-lg rounded-lg transform hover:scale-105 transition">
+            <img src="screenshot-landing-page-2.jpg" onerror="this.src='https://placehold.co/300x200?text=No+Image'" alt="Optimasi WordPress" class="w-full rounded-lg">
+            <h4 class="font-semibold mt-4 text-white">Optimasi - WordPress</h4>
+        </div>
+        <div id="ow" class="p-6 bg-gray-700 shadow-lg rounded-lg transform hover:scale-105 transition">
+            <img src="screenshot-landing-page-2.jpg" onerror="this.src='https://placehold.co/300x200?text=No+Image'" alt="Optimasi Wix" class="w-full rounded-lg">
+            <h4 class="font-semibold mt-4 text-white">Optimasi - Wix</h4>
+        </div>
+    </div>
+</div>
+
+
+</section>
+
     
     <!-- Footer -->
     <footer class="bg-gray-900 text-gray-400 text-center p-6 mt-6">
@@ -168,7 +191,7 @@
         {
             id: "lp",
             images: [
-                "screenshot-landing-page-2.jpg",
+                "./asset/landing-page/etaSeblak/etaSeblak.png",
                 "screenshot-landing-page-2b.jpg",
                 "screenshot-landing-page-2c.jpg"
             ]
@@ -187,6 +210,22 @@
                 "./asset/custom-web/playstation/playstation.png",
                 "./asset/playstation/preview1.jpg",
                 "./asset/playstation/preview2.jpg"
+            ]
+        },
+        {
+            id: "op",
+            images: [
+                "screenshot-landing-page-2.jpg",
+                "screenshot-landing-page-2b.jpg",
+                "screenshot-landing-page-2c.jpg"
+            ]
+        },
+        {
+            id: "ow",
+            images: [
+            "screenshot-landing-page-2.jpg",
+                "screenshot-landing-page-2b.jpg",
+                "screenshot-landing-page-2c.jpg"
             ]
         }
     ];

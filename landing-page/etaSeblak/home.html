@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>etaSeblak - Nikmati Kelezatan Seblak & Makanan Viral Favoritmu!</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 text-gray-900">
+<!-- Navbar -->
+<nav class="fixed top-0 left-0 w-full z-20 bg-transparent shadow-md">
+    <div class="container mx-auto flex justify-between items-center py-4 px-6 relative">
+        <div class="relative flex items-center">
+            <canvas id="fireCanvas" class="absolute top-[-10px] left-2 transform -translate-x-1/4 w-13 h-12 pointer-events-none"></canvas>
+            <a href="#" id="fireText" class="text-2xl font-bold text-orange-500 relative z-10">etaSeblak</a>
+        </div>
+        <button id="menu-btn" class="md:hidden text-gray-300">☰</button>
+        <ul class="hidden md:flex space-x-6 text-white">
+            <li><a href="#about" class="hover:text-red-400">Tentang</a></li>
+            <li><a href="#products" class="hover:text-red-400">Menu</a></li>
+            <li><a href="#testimonials" class="hover:text-red-400">Testimoni</a></li>
+            <li><a href="#order" class="hover:text-red-400">Pesan</a></li>
+        </ul>
+    </div>
+</nav>
+
+<!-- Hero Section -->
+<header id="hero" class="relative text-white text-center px-4 bg-cover bg-center bg-no-repeat min-h-[500px] md:min-h-[600px] lg:min-h-[700px] flex items-center justify-center"
+    style="background-image: url('./asset/dimsum.jpg'); background-attachment: fixed;">
+    <div class="absolute inset-0 bg-black/50 flex flex-col justify-center items-center p-6">
+        <h1 class="text-4xl md:text-5xl font-bold">etaSeblak</h1>
+        <p class="text-lg md:text-xl mt-2">Nikmati Kelezatan Seblak & Makanan Viral Favoritmu!</p>
+        <a href="#order" class="mt-4 inline-block bg-white text-red-500 font-semibold px-6 py-2 rounded shadow-md hover:bg-gray-200">Pesan Sekarang</a>
+    </div>
+</header>
+
+    
+    <!-- Main Section -->
+    <main>
+<!-- Tentang Kami -->
+<section id="about" class="py-16 px-6 relative bg-black text-white">
+    <!-- Overlay -->
+    <div class="absolute inset-0 bg-black/60"></div>
+
+    <div class="relative max-w-5xl mx-auto flex flex-col md:flex-row items-center gap-8">
+        <!-- Gambar Ilustrasi -->
+        <div class="w-full md:w-1/2">
+            <img src="./asset/dimsum1.jpg" alt="Seblak dan Dimsum" class="w-full h-64 object-cover rounded-lg shadow-lg border-4 border-red-500">
+        </div>
+        <!-- Konten Teks -->
+        <div class="w-full md:w-1/2 text-center md:text-left">
+            <h2 class="text-4xl font-bold font-[Bebas Neue] tracking-wide">Tentang Kami</h2>
+            <p class="mt-4 text-lg font-[Poppins] text-gray-300 leading-relaxed">
+                <span class="text-red-400 font-semibold">etaSeblak</span> menghadirkan cita rasa autentik dengan bahan berkualitas tinggi. Kami menyajikan 
+                <span class="underline decoration-red-400">seblak, dimsum, dan makanan viral</span> yang menggugah selera, siap menemani hari-hari Anda.
+            </p>
+        </div>
+    </div>
+</section>
+        
+   <!-- Produk Unggulan -->
+<section id="products" class="py-16 px-6 bg-black text-white">
+    <div class="max-w-6xl mx-auto text-center">
+        <h2 class="text-4xl font-bold font-[Bebas Neue] tracking-wide">Produk Unggulan</h2>
+        <p class="mt-2 text-lg font-[Poppins] text-gray-200">Nikmati berbagai pilihan makanan lezat kami!</p>
+    </div>
+
+    <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-8 mt-10 max-w-6xl mx-auto">
+        <!-- Produk 1 -->
+        <article class="bg-white p-4 rounded-lg shadow-lg transition transform hover:scale-105 hover:shadow-xl text-black">
+            <figure class="overflow-hidden rounded-lg">
+                <img src="./asset/dimsum1.jpg" alt="Seblak Spesial" class="w-full h-48 object-cover">
+            </figure>
+            <h3 class="text-xl font-bold mt-4 font-[Poppins]">Seblak Spesial</h3>
+            <p class="text-red-500 font-semibold">Rp 20.000</p>
+            <a href="#order" class="block bg-red-500 text-white py-2 mt-3 text-center rounded hover:bg-red-600">Pesan</a>
+        </article>
+
+        <!-- Produk 2 -->
+        <article class="bg-white p-4 rounded-lg shadow-lg transition transform hover:scale-105 hover:shadow-xl text-black">
+            <figure class="overflow-hidden rounded-lg">
+                <img src="./asset/dimsum.jpg" alt="Dimsum Ayam" class="w-full h-48 object-cover">
+            </figure>
+            <h3 class="text-xl font-bold mt-4 font-[Poppins]">Dimsum Ayam</h3>
+            <p class="text-red-500 font-semibold">Rp 15.000</p>
+            <a href="#order" class="block bg-red-500 text-white py-2 mt-3 text-center rounded hover:bg-red-600">Pesan</a>
+        </article>
+
+            <!-- Produk 3 -->
+            <article class="bg-white p-4 rounded-lg shadow-lg transition transform hover:scale-105 hover:shadow-xl text-black">
+                <figure class="overflow-hidden rounded-lg">
+                    <img src="./asset/dimsum1.jpg" alt="Dimsum Ayam" class="w-full h-48 object-cover">
+                </figure>
+                <h3 class="text-xl font-bold mt-4 font-[Poppins]">Dimsum Sapi</h3>
+                <p class="text-red-500 font-semibold">Rp 26.000</p>
+                <a href="#order" class="block bg-red-500 text-white py-2 mt-3 text-center rounded hover:bg-red-600">Pesan</a>
+            </article>
+    
+              <!-- Produk 4 -->
+              <article class="bg-white p-4 rounded-lg shadow-lg transition transform hover:scale-105 hover:shadow-xl text-black">
+                <figure class="overflow-hidden rounded-lg">
+                    <img src="./asset/dimsum.jpg" alt="Dimsum Ayam" class="w-full h-48 object-cover">
+                </figure>
+                <h3 class="text-xl font-bold mt-4 font-[Poppins]">Seblaknya</h3>
+                <p class="text-red-500 font-semibold">Rp 15.000</p>
+                <a href="#order" class="block bg-red-500 text-white py-2 mt-3 text-center rounded hover:bg-red-600">Pesan</a>
+            </article>
+    
+              <!-- Produk 5 -->
+              <article class="bg-white p-4 rounded-lg shadow-lg transition transform hover:scale-105 hover:shadow-xl text-black">
+                <figure class="overflow-hidden rounded-lg">
+                    <img src="./asset/dimsum1.jpg" alt="Dimsum Ayam" class="w-full h-48 object-cover">
+                </figure>
+                <h3 class="text-xl font-bold mt-4 font-[Poppins]">seblak Ayam</h3>
+                <p class="text-red-500 font-semibold">Rp 15.000</p>
+                <a href="#order" class="block bg-red-500 text-white py-2 mt-3 text-center rounded hover:bg-red-600">Pesan</a>
+            </article>
+    </div>
+</section>
+
+        
+      <!-- Testimoni Pelanggan -->
+<section id="testimonials" class="py-16 px-6 bg-gradient-to-b from-orange-400 via-red-500 to-red-700 text-white">
+    <div class="max-w-4xl mx-auto text-center">
+        <h2 class="text-4xl font-bold font-[Bebas Neue] tracking-wide">Testimoni Pelanggan</h2>
+        <p class="mt-2 text-lg font-[Poppins] text-orange-200">Apa kata mereka tentang etaSeblak?</p>
+    </div>
+
+    <div class="mt-10 flex flex-col items-center">
+        <blockquote class="relative bg-white text-black p-6 rounded-lg shadow-lg max-w-lg mx-auto text-center">
+            <span class="absolute -top-5 left-1/2 transform -translate-x-1/2 text-red-500 text-4xl font-bold">“</span>
+            <p class="italic font-medium text-lg">"Seblaknya enak banget, pedasnya pas!"</p>
+            <cite class="block mt-2 text-gray-600 font-semibold">- Siti, Jakarta</cite>
+        </blockquote>
+
+        <blockquote class="relative bg-white text-black p-6 rounded-lg shadow-lg max-w-lg mx-auto text-center mt-6">
+            <span class="absolute -top-5 left-1/2 transform -translate-x-1/2 text-red-500 text-4xl font-bold">“</span>
+            <p class="italic font-medium text-lg">"Dimsumnya lembut dan gurih, bikin ketagihan!"</p>
+            <cite class="block mt-2 text-gray-600 font-semibold">- Budi, Bandung</cite>
+        </blockquote>
+    </div>
+</section>
+
+<!-- Cara Pemesanan -->
+<section id="order" class="py-16 px-6 bg-gradient-to-b from-red-700 via-red-900 to-black text-white text-center">
+    <div class="max-w-3xl mx-auto">
+        <h2 class="text-4xl font-bold font-[Bebas Neue] tracking-wide">Cara Pemesanan</h2>
+        <p class="mt-2 text-lg font-[Poppins] text-orange-300">Mudah & Cepat! Pesan sekarang juga.</p>
+
+        <!-- Langkah Pemesanan -->
+        <div class="mt-6 grid sm:grid-cols-3 gap-6">
+            <div class="bg-white text-gray-900 p-4 rounded-lg shadow-md flex flex-col items-center">
+                <span class="text-4xl">📌</span>
+                <p class="mt-2 font-semibold">Pilih Menu Favorit</p>
+            </div>
+            <div class="bg-white text-gray-900 p-4 rounded-lg shadow-md flex flex-col items-center">
+                <span class="text-4xl">📲</span>
+                <p class="mt-2 font-semibold">Hubungi via WhatsApp</p>
+            </div>
+            <div class="bg-white text-gray-900 p-4 rounded-lg shadow-md flex flex-col items-center">
+                <span class="text-4xl">🚚</span>
+                <p class="mt-2 font-semibold">Pesanan Diantar</p>
+            </div>
+        </div>
+
+        <!-- Tombol Pesan -->
+        <a href="https://wa.me/6281234567890"
+            class="mt-6 inline-flex items-center gap-2 bg-green-500 text-white px-6 py-3 rounded-lg text-lg font-semibold shadow-md hover:bg-green-600 transition">
+            📩 Pesan via WhatsApp
+        </a>
+    </div>
+</section>
+
+    </main>
+    
+    <footer class="py-6 bg-gray-900 text-gray-300 text-center">
+        <h2 class="text-xl font-semibold text-white">Kontak Kami</h2>
+        <address class="mt-2 space-y-1">
+            <p>WhatsApp: <a href="https://wa.me/6281234567890" class="text-gray-400 hover:text-white transition">+62 812-3456-7890</a></p>
+            <p>Instagram: <a href="https://instagram.com/etasablak" class="text-gray-400 hover:text-white transition">@etasablak</a></p>
+        </address>
+        <p class="mt-4 text-sm">&copy; 2025 Mardiyana Tech Studio. Semua Hak Dilindungi.</p>
+    </footer>
+      
+    <script>
+    document.addEventListener("DOMContentLoaded", function () {
+        const canvas = document.getElementById("fireCanvas");
+        const ctx = canvas.getContext("2d");
+        const fireText = document.getElementById("fireText");
+        const rect = fireText.getBoundingClientRect();
+    
+        // Sesuaikan ukuran canvas dengan teks
+        canvas.width = rect.width + 30;
+        canvas.height = 80;
+        canvas.style.top = `${rect.top + window.scrollY - 20}px`;
+        canvas.style.left = `${rect.left + window.scrollX - 15}px`;
+    
+        let particles = [];
+    
+        function createParticle() {
+            return {
+                x: Math.random() * canvas.width, 
+                y: canvas.height,
+                size: Math.random() * 8 + 2,
+                speedY: Math.random() * 2 + 1,
+                opacity: Math.random() * 0.6 + 0.4,
+                color: `rgba(255, ${Math.floor(Math.random() * 150 + 50)}, 0, 1)`,
+            };
+        }
+    
+        function updateParticles() {
+            particles.forEach((p, index) => {
+                p.y -= p.speedY;
+                p.opacity -= 0.015;
+                p.size *= 0.98;
+                if (p.opacity <= 0) {
+                    particles[index] = createParticle();
+                }
+            });
+    
+            particles = particles.filter((p) => p.opacity > 0);
+            while (particles.length < 50) {
+                particles.push(createParticle());
+            }
+        }
+    
+        function drawParticles() {
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+            particles.forEach((p) => {
+                ctx.fillStyle = p.color.replace("1)", `${p.opacity})`);
+                ctx.beginPath();
+                ctx.arc(p.x, p.y, p.size, 0, Math.PI * 2);
+                ctx.fill();
+            });
+        }
+    
+        function animateFire() {
+            updateParticles();
+            drawParticles();
+            requestAnimationFrame(animateFire);
+        }
+    
+        for (let i = 0; i < 50; i++) {
+            particles.push(createParticle());
+        }
+    
+        animateFire();
+    
+        // Tambahkan efek berkedip ke teks langsung lewat JS
+        setInterval(() => {
+            fireText.style.textShadow = `
+                0 0 ${Math.random() * 10 + 5}px rgba(255, 69, 0, 0.8),
+                0 0 ${Math.random() * 20 + 10}px rgba(255, 140, 0, 0.7)
+            `;
+        }, 200);
+    });
+    
+    </script>
+</body>
+</html>
