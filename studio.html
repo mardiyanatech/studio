@@ -35,117 +35,113 @@
     </section>
 
     <main id="content" class="container mx-auto py-12 px-6">
-
 <!-- Filter Buttons -->
-<section id="catalog" class="flex justify-center flex-wrap gap-4 mb-8">
-    <button class="filter-btn px-5 py-2 bg-gradient-to-r from-blue-500 to-indigo-600 text-white font-semibold rounded-lg hover:from-blue-600 hover:to-indigo-700 transition active-filter" data-filter="all">🔥 Semua</button>
+<section id="catalog" class="flex flex-wrap justify-center gap-3 mb-6 px-4">
+    <button class="filter-btn px-4 py-2 text-sm sm:text-base bg-gradient-to-r from-blue-500 to-indigo-600 text-white font-semibold rounded-lg hover:from-blue-600 hover:to-indigo-700 transition active-filter" data-filter="all">🔥 Semua</button>
     
-    <button class="filter-btn px-5 py-2 bg-gradient-to-r from-green-400 to-teal-600 text-white font-semibold rounded-lg hover:from-green-500 hover:to-teal-700 transition" data-filter="landing-page">🌍 Landing Page</button>
+    <button class="filter-btn px-4 py-2 text-sm sm:text-base bg-gradient-to-r from-green-400 to-teal-600 text-white font-semibold rounded-lg hover:from-green-500 hover:to-teal-700 transition" data-filter="landing-page">🌍 Landing Page</button>
     
-    <button class="filter-btn px-5 py-2 bg-gradient-to-r from-purple-500 to-pink-600 text-white font-semibold rounded-lg hover:from-purple-600 hover:to-pink-700 transition" data-filter="undangan-digital">💌 Undangan Digital</button>
+    <button class="filter-btn px-4 py-2 text-sm sm:text-base bg-gradient-to-r from-purple-500 to-pink-600 text-white font-semibold rounded-lg hover:from-purple-600 hover:to-pink-700 transition" data-filter="undangan-digital">💌 Undangan Digital</button>
     
-    <button class="filter-btn px-5 py-2 bg-gradient-to-r from-yellow-400 to-orange-600 text-white font-semibold rounded-lg hover:from-yellow-500 hover:to-orange-700 transition" data-filter="custom-website">🎨 Custom Website</button>
+    <button class="filter-btn px-4 py-2 text-sm sm:text-base bg-gradient-to-r from-yellow-400 to-orange-600 text-white font-semibold rounded-lg hover:from-yellow-500 hover:to-orange-700 transition" data-filter="custom-website">🎨 Custom Website</button>
     
-    <button class="filter-btn px-5 py-2 bg-gradient-to-r from-red-500 to-rose-600 text-white font-semibold rounded-lg hover:from-red-600 hover:to-rose-700 transition" data-filter="wordpress-wix">⚡ WP & Wix Setup</button>
+    <button class="filter-btn px-4 py-2 text-sm sm:text-base bg-gradient-to-r from-red-500 to-rose-600 text-white font-semibold rounded-lg hover:from-red-600 hover:to-rose-700 transition" data-filter="wordpress-wix">⚡ WP & Wix Setup</button>
 </section>
 
 
+
 <!-- Project Grid -->
-<section id="project" class="grid md:grid-cols-2 lg:grid-cols-3 gap-8" id="project-list">
+<section id="project" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6" id="project-list">
     <!-- Project Cards -->
-    <div id="landing-page">
-        <article class="project-card landing-page bg-gray-800 shadow-xl rounded-lg overflow-hidden transform transition hover:scale-105 h-full flex flex-col">
-            <img src="./asset/landing-page/etaSeblak/etaSeblak.png" onerror="this.onerror=null;this.src='https://placehold.co/400x300?text=No+Image'" alt="Landing Page 1" class="w-full h-48 object-cover">
-            <div class="p-6 flex flex-col flex-grow">
-                <h3 class="font-semibold text-xl">etaSeblak - Website</h3>
-                <p class="text-gray-400 mb-4 flex-grow">
-                    etaSeblak – Lezat, Viral, & Praktis! 🍜🔥
-                    Landing page modern untuk seblak, dimsum, dan makanan viral. Cepat, responsif, dan siap menerima pesanan dengan sekali klik! 🚀</p>
-                <a href="./landing-page/etaSeblak/home.html" target="_blank" class="px-4 py-2 bg-blue-600 rounded hover:bg-blue-700 text-white inline-block text-center">Lihat Demo</a>
-            </div>
-        </article>
-    </div>
+    <article class="project-card landing-page bg-gray-800 shadow-lg rounded-lg overflow-hidden transform transition hover:scale-105 flex flex-col h-full">
+        <img src="./asset/landing-page/etaSeblak/etaSeblak.png" onerror="this.onerror=null;this.src='https://placehold.co/400x300?text=No+Image'" alt="etaSeblak" class="w-full h-48 object-cover">
+        <div class="p-6 flex flex-col flex-grow">
+            <h3 class="font-semibold text-xl">etaSeblak - Website</h3>
+            <p class="text-gray-400 flex-grow">
+                Landing page modern untuk seblak, dimsum, dan makanan viral. Cepat, responsif, dan siap menerima pesanan dengan sekali klik! 🚀
+            </p>
+            <a href="./landing-page/etaSeblak/home.html" target="_blank" class="px-4 py-2 bg-blue-600 rounded hover:bg-blue-700 text-white text-center">Lihat Demo</a>
+        </div>
+    </article>
 
-    <div id="undangan">
-        <article class="project-card undangan-digital bg-gray-800 shadow-xl rounded-lg overflow-hidden transform transition hover:scale-105 h-full flex flex-col">
-            <img src="./asset/undangan-digital/bmEvent/bmEvent.png" onerror="this.onerror=null;this.src='https://placehold.co/400x300?text=No+Image'" alt="Undangan Digital 1" class="w-full h-48 object-cover">
-            <div class="p-6 flex flex-col flex-grow">
-                <h3 class="font-semibold text-xl">BadmintonEvent - Website</h3>
-                <p class="text-gray-400 mb-4 flex-grow">
-                    Platform interaktif untuk pendaftaran turnamen bulu tangkis.
-                    Dapatkan informasi lengkap, daftar dengan cepat, dan unduh tiket dalam format PDF dengan mudah. Semua dalam satu tempat untuk pengalaman yang lebih praktis dan efisien! 🏸🔥
-                </p>
-                <a href="./undangan-digital/badminton/home.html" target="_blank" class="px-4 py-2 bg-green-600 rounded hover:bg-green-700 text-white inline-block text-center">Lihat Demo</a>
-            </div>
-        </article>
-    </div>
+    <article class="project-card landing-page bg-gray-800 shadow-lg rounded-lg overflow-hidden transform transition hover:scale-105 flex flex-col h-full">
+        <img src="./asset/landing-page/portfolio/portfolio.png" onerror="this.onerror=null;this.src='https://placehold.co/400x300?text=No+Image'" alt="Portfolio" class="w-full h-48 object-cover">
+        <div class="p-6 flex flex-col flex-grow">
+            <h3 class="font-semibold text-xl">Bejo Portfolio - Website</h3>
+            <p class="text-gray-400 flex-grow">
+                🚀 Tampilkan Karya & Keahlian Anda Secara Profesional! Desain elegan, mudah dikelola, SEO friendly, dan tampil optimal di semua perangkat.
+            </p>
+            <a href="./landing-page/portfolio/home.html" target="_blank" class="px-4 py-2 bg-blue-600 rounded hover:bg-blue-700 text-white text-center">Lihat Demo</a>
+        </div>
+    </article>
 
-    <div id="custom">
-        <article class="project-card custom-website bg-gray-800 shadow-xl rounded-lg overflow-hidden transform transition hover:scale-105 h-full flex flex-col">
-            <img src="./asset/custom-web/playstation/playstation.png" onerror="this.onerror=null;this.src='https://placehold.co/400x300?text=No+Image'" alt="Custom Website PlayStation" class="w-full h-48 object-cover">
-            <div class="p-6 flex flex-col flex-grow">
-                <h3 class="font-semibold text-xl">Custom Website - WarPlayStation</h3>
-                <p class="text-gray-400 mb-4 flex-grow">
-                    🎮 Main Jadi Lebih Seru! 🎮
+    <article class="project-card undangan-digital bg-gray-800 shadow-lg rounded-lg overflow-hidden transform transition hover:scale-105 flex flex-col h-full">
+        <img src="./asset/undangan-digital/bmEvent/bmEvent.png" onerror="this.onerror=null;this.src='https://placehold.co/400x300?text=No+Image'" alt="Undangan Digital" class="w-full h-48 object-cover">
+        <div class="p-6 flex flex-col flex-grow">
+            <h3 class="font-semibold text-xl">BadmintonEvent - Website</h3>
+            <p class="text-gray-400 flex-grow">
+                Platform interaktif untuk pendaftaran turnamen bulu tangkis dengan informasi lengkap & daftar cepat. 🏸🔥
+            </p>
+            <a href="./undangan-digital/badminton/home.html" target="_blank" class="px-4 py-2 bg-green-600 rounded hover:bg-green-700 text-white text-center">Lihat Demo</a>
+        </div>
+    </article>
 
-                    Sewa PlayStation (PS) kini lebih mudah dengan website modern dan visual menarik! 🔥 Cek daftar game favorit, lihat harga sewa, dan pesan langsung secara online dengan praktis. Siap main tanpa ribet? 🚀✨
-                </p>
-                <a href="./custom-web/playstation/home.html" target="_blank" class="px-4 py-2 bg-gradient-to-r from-yellow-400 via-red-500 to-purple-600 rounded hover:bg-green-700 text-white inline-block text-center">Lihat Demo</a>
-            </div>
-        </article>
-    </div>
+    <article class="project-card custom-website bg-gray-800 shadow-lg rounded-lg overflow-hidden transform transition hover:scale-105 flex flex-col h-full">
+        <img src="./asset/custom-web/playstation/playstation.png" onerror="this.onerror=null;this.src='https://placehold.co/400x300?text=No+Image'" alt="PlayStation" class="w-full h-48 object-cover">
+        <div class="p-6 flex flex-col flex-grow">
+            <h3 class="font-semibold text-xl">Custom Website - WarPlayStation</h3>
+            <p class="text-gray-400 flex-grow">
+                🎮 Sewa PlayStation lebih mudah! Cek daftar game, harga sewa, dan pesan langsung online. 🚀✨
+            </p>
+            <a href="./custom-web/playstation/home.html" target="_blank" class="px-4 py-2 bg-gradient-to-r from-yellow-400 via-red-500 to-purple-600 rounded hover:bg-green-700 text-white text-center">Lihat Demo</a>
+        </div>
+    </article>
 
-    <div id="wordpress-wix">
-        <article class="project-card wordpress-wix bg-gray-800 shadow-xl rounded-lg overflow-hidden transform transition hover:scale-105 h-full flex flex-col">
-            <img src="./asset/wordpress-wix/optimize.png" onerror="this.onerror=null;this.src='https://placehold.co/400x300?text=No+Image'" alt="Setup & Optimasi WordPress/Wix" class="w-full h-48 object-cover">
-            <div class="p-6 flex flex-col flex-grow">
-                <h3 class="font-semibold text-xl">Setup & Optimasi WordPress/Wix</h3>
-                <p class="text-gray-400 mb-4 flex-grow">
-                    Layanan optimasi kecepatan, SEO, keamanan, dan setup profesional untuk WordPress & Wix.
-                </p>
-                <a href="#" target="_blank" class="px-4 py-2 bg-red-600 rounded hover:bg-red-700 text-white inline-block text-center">Lihat Detail</a>
-            </div>
-        </article>
-    </div>
-</section>      
+    <article class="project-card wordpress-wix bg-gray-800 shadow-lg rounded-lg overflow-hidden transform transition hover:scale-105 flex flex-col h-full">
+        <img src="./asset/wordpress-wix/optimize.png" onerror="this.onerror=null;this.src='https://placehold.co/400x300?text=No+Image'" alt="WordPress & Wix" class="w-full h-48 object-cover">
+        <div class="p-6 flex flex-col flex-grow">
+            <h3 class="font-semibold text-xl">Setup & Optimasi WordPress/Wix</h3>
+            <p class="text-gray-400 flex-grow">
+                Layanan optimasi kecepatan, SEO, keamanan, dan setup profesional untuk WordPress & Wix.
+            </p>
+            <a href="#" target="_blank" class="px-4 py-2 bg-red-600 rounded hover:bg-red-700 text-white text-center">Lihat Detail</a>
+        </div>
+    </article>
+</section>
+  
     </main>
 
     <script>
-        window.onload = function () {
-            // Animasi GSAP setelah halaman dimuat
-            gsap.from(".project-card", { 
-                opacity: 0, 
-                y: 50, 
-                scale: 0.9, 
-                duration: 1, 
-                stagger: 0.2, 
-                ease: "power2.out" 
-            });
-    
-            gsap.from("#title", { opacity: 0, y: -50, duration: 1, ease: "power2.out" });
-            gsap.from("#subtitle", { opacity: 0, y: -30, duration: 1, delay: 0.5, ease: "power2.out" });
-        };
-    
-        // Filter Projects
-        document.querySelectorAll(".filter-btn").forEach(button => {
-            button.addEventListener("click", function() {
-                let filter = this.dataset.filter;
-                
-                // Ubah tampilan tombol aktif
-                document.querySelectorAll(".filter-btn").forEach(btn => btn.classList.remove("active-filter"));
-                this.classList.add("active-filter");
-                
-                // Filter kartu proyek
-                document.querySelectorAll(".project-card").forEach(card => {
-                    if (filter === "all" || card.classList.contains(filter)) {
-                        gsap.to(card, { opacity: 1, scale: 1, duration: 0.3, visibility: "visible" });
-                    } else {
-                        gsap.to(card, { opacity: 0, scale: 0.8, duration: 0.3, visibility: "hidden" });
-                    }
-                });
+      document.addEventListener("DOMContentLoaded", function () {
+    gsap.from(".project-card", { 
+        opacity: 0, 
+        y: 50, 
+        scale: 0.9, 
+        duration: 1, 
+        stagger: 0.2, 
+        ease: "power2.out" 
+    });
+
+    document.querySelectorAll(".filter-btn").forEach(button => {
+        button.addEventListener("click", function () {
+            let filter = this.dataset.filter;
+            document.querySelector(".filter-btn.active-filter")?.classList.remove("active-filter");
+            this.classList.add("active-filter");
+
+            document.querySelectorAll(".project-card").forEach(card => {
+                if (filter === "all" || card.classList.contains(filter)) {
+                    gsap.to(card, { opacity: 1, scale: 1, duration: 0.3, display: "flex" });
+                } else {
+                    gsap.to(card, { opacity: 0, scale: 0.8, duration: 0.3, onComplete: () => {
+                        card.style.display = "none";
+                    }});
+                }
             });
         });
+    });
+});
     </script>
+    
     
 </body>
 </html>
