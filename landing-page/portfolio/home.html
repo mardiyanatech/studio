@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio | Personal Branding</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body class="bg-gray-100 text-gray-900 font-[Poppins]">
+    <header id="navbar" class="fixed w-full p-4 flex justify-between items-center bg-transparent transition-all duration-300 z-50">
+        <h1 class="text-2xl font-semibold text-gray-800 tracking-wide whitespace-nowrap">
+            Bejo<span class="text-blue-500"> Design</span>
+        </h1>
+          
+        <!-- Navigasi -->
+        <nav class="w-full md:w-auto flex justify-end items-center">
+            <ul id="menu" class="hidden md:flex space-x-5 text-base text-gray-700">
+                <li><a href="#about" class="hover:text-blue-500 transition duration-200">Tentang</a></li>
+                <li><a href="#portfolio" class="hover:text-blue-500 transition duration-200">Portfolio</a></li>
+                <li><a href="#contact" class="hover:text-blue-500 transition duration-200">Kontak</a></li>
+            </ul>
+    
+            <!-- Tombol Hamburger -->
+            <button id="menu-btn" class="md:hidden text-gray-700 focus:outline-none absolute">
+                <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+                </svg>
+            </button>
+    
+            <!-- Mobile Menu -->
+            <ul id="mobile-menu"
+                class="hidden fixed top-16 left-0 w-full bg-white shadow-md text-center p-4 space-y-3 text-gray-700 md:hidden transition-all duration-300">
+                <li><a href="#about" class="block hover:text-blue-500 transition duration-200">Tentang</a></li>
+                <li><a href="#portfolio" class="block hover:text-blue-500 transition duration-200">Portfolio</a></li>
+                <li><a href="#contact" class="block hover:text-blue-500 transition duration-200">Kontak</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    
+    
+    <main class="container mx-auto p-5">
+        <section id="about" class="py-16 flex flex-col md:flex-row items-center text-center md:text-left">
+            <!-- Bagian Gambar -->
+            <div class="md:w-1/2">
+                <img src="./asset/designer.jpg" alt="Designer"
+                    class="rounded-lg shadow-lg mx-auto md:mx-0 object-cover w-full max-w-xs md:max-w-md transform transition duration-500 ease-in-out scale-95 opacity-0"
+                    id="about-img">
+            </div>
+        
+            <!-- Bagian Teks -->
+            <div class="md:w-1/2 mt-6 md:mt-0 md:pl-10">
+                <h2 class="text-3xl font-semibold opacity-0 transform translate-y-5 transition-all duration-500"
+                    id="about-title">
+                    Tentang Saya
+                </h2>
+                <p class="mt-4 text-gray-700 opacity-0 transform translate-y-5 transition-all duration-700 delay-200"
+                    id="about-text">
+                    Saya adalah seorang desainer kreatif dengan pengalaman dalam UI/UX, branding, dan ilustrasi.
+                    Saya percaya bahwa desain yang baik dapat mengubah cara orang berinteraksi dengan dunia digital.
+                </p>
+            </div>
+        </section>
+        
+        
+        <section id="portfolio" class="py-16 text-center relative overflow-hidden">
+            <h2 id="portfolio-title" class="text-3xl font-semibold text-gray-800 opacity-0 translate-y-5 transition-all duration-500">
+                Portfolio
+            </h2>
+            <p id="portfolio-text" class="mt-4 text-gray-600 opacity-0 translate-y-5 transition-all duration-700 delay-200">
+                Berikut adalah beberapa hasil karya terbaik saya.
+            </p>
+        
+            <!-- Elemen Abstrak -->
+            <div class="absolute top-10 left-10 w-32 h-32 bg-blue-500 opacity-40 rounded-full blur-2xl"></div>
+            <div class="absolute bottom-10 right-10 w-40 h-40 bg-purple-500 opacity-40 rounded-full blur-2xl"></div>
+        
+<!-- Gallery -->
+<div id="portfolio-gallery" class="relative grid grid-cols-2 md:grid-cols-3 gap-4 mt-8 auto-rows-fr">
+    <img src="./asset/1.jpg" alt="Project 1" class="portfolio-item w-full h-full object-cover rounded-lg shadow-lg opacity-0 translate-y-5 transition-all duration-700" loading="lazy">
+    <img src="./asset/2.jpg" alt="Project 2" class="portfolio-item w-full h-full object-cover rounded-lg shadow-lg opacity-0 translate-y-5 transition-all duration-700" loading="lazy">
+    <img src="./asset/3.jpg" alt="Project 3" class="portfolio-item w-full h-full object-cover rounded-lg shadow-lg opacity-0 translate-y-5 transition-all duration-700" loading="lazy">
+    <img src="./asset/4.jpg" alt="Project 4" class="portfolio-item w-full h-full object-cover rounded-lg shadow-lg opacity-0 translate-y-5 transition-all duration-700" loading="lazy">
+    <img src="./asset/5.jpg" alt="Project 5" class="portfolio-item w-full h-full object-cover rounded-lg shadow-lg opacity-0 translate-y-5 transition-all duration-700" loading="lazy">
+    <img src="./asset/6.jpg" alt="Project 6" class="portfolio-item w-full h-full object-cover rounded-lg shadow-lg opacity-0 translate-y-5 transition-all duration-700" loading="lazy">
+</div>
+
+        </section>
+        
+                
+        
+        <section id="contact" class="py-10 text-center bg-gray-50 shadow-lg rounded-lg mx-4 sm:mx-8 md:mx-auto md:w-3/4 lg:w-1/2 p-6 sm:p-8">
+            <h2 class="text-3xl font-semibold text-gray-800">Kontak</h2>
+            <p class="mt-4 text-gray-600">Hubungi saya untuk proyek desain atau kolaborasi.</p>
+            
+            <form class="mt-6 space-y-6">
+                <div class="relative">
+                    <input type="text" id="name" class="peer w-full p-3 border border-gray-400 rounded-lg bg-transparent focus:outline-none focus:ring-2 focus:ring-blue-400 placeholder-transparent" placeholder="Nama Anda">
+                    <label for="name" class="absolute left-3 top-3 text-gray-500 text-sm transition-all peer-placeholder-shown:top-4 peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-600 peer-focus:top-2 peer-focus:text-xs peer-focus:text-blue-500">
+                        Nama Anda
+                    </label>
+                </div>
+                
+                <div class="relative">
+                    <input type="email" id="email" class="peer w-full p-3 border border-gray-400 rounded-lg bg-transparent focus:outline-none focus:ring-2 focus:ring-blue-400 placeholder-transparent" placeholder="Email Anda">
+                    <label for="email" class="absolute left-3 top-3 text-gray-500 text-sm transition-all peer-placeholder-shown:top-4 peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-600 peer-focus:top-2 peer-focus:text-xs peer-focus:text-blue-500">
+                        Email Anda
+                    </label>
+                </div>
+                
+                <div class="relative">
+                    <textarea id="message" rows="4" class="peer w-full p-3 border border-gray-400 rounded-lg bg-transparent focus:outline-none focus:ring-2 focus:ring-blue-400 placeholder-transparent" placeholder="Pesan"></textarea>
+                    <label for="message" class="absolute left-3 top-3 text-gray-500 text-sm transition-all peer-placeholder-shown:top-4 peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-600 peer-focus:top-2 peer-focus:text-xs peer-focus:text-blue-500">
+                        Pesan
+                    </label>
+                </div>
+                
+                <button type="submit" class="w-full bg-blue-500 text-white py-3 rounded-lg hover:bg-blue-600 transition duration-300">Kirim</button>
+            </form>
+        </section>        
+    </main>
+    
+    <footer class="bg-gray-900 text-gray-400 text-center p-6 mt-6">
+        <p>&copy; 2025 <a href="/studio/index.html" class="text-blue-400 hover:text-blue-300 transition duration-300">Mardiyana Tech Studio</a>. Semua Hak Dilindungi.</p>
+    </footer>    
+
+    <script>
+        // Navbar scroll effect
+        window.addEventListener("scroll", function () {
+            const navbar = document.getElementById("navbar");
+            if (window.scrollY > 50) {
+                navbar.classList.add("bg-white", "bg-opacity-90", "shadow-md", "backdrop-blur-md");
+            } else {
+                navbar.classList.remove("bg-white", "bg-opacity-90", "shadow-md", "backdrop-blur-md");
+            }
+        });
+    
+        // Toggle Mobile Menu
+        const menuBtn = document.getElementById("menu-btn");
+        const mobileMenu = document.getElementById("mobile-menu");
+    
+        menuBtn.addEventListener("click", () => {
+            mobileMenu.classList.toggle("hidden");
+        });
+    
+        // Close menu when clicking outside
+        document.addEventListener("click", (e) => {
+            if (!menuBtn.contains(e.target) && !mobileMenu.contains(e.target)) {
+                mobileMenu.classList.add("hidden");
+            }
+        });
+        document.addEventListener("DOMContentLoaded", function () {
+    const aboutSection = document.getElementById("about");
+    const aboutImg = document.getElementById("about-img");
+    const aboutTitle = document.getElementById("about-title");
+    const aboutText = document.getElementById("about-text");
+
+    function handleScroll() {
+        const sectionPos = aboutSection.getBoundingClientRect().top;
+        const screenHeight = window.innerHeight;
+
+        if (sectionPos < screenHeight - 100) {
+            aboutImg.classList.add("scale-100", "opacity-100");
+            aboutTitle.classList.add("opacity-100", "translate-y-0");
+            aboutText.classList.add("opacity-100", "translate-y-0");
+        }
+    }
+
+    window.addEventListener("scroll", handleScroll);
+    handleScroll();
+});
+
+document.addEventListener("DOMContentLoaded", function () {
+    const portfolioSection = document.getElementById("portfolio");
+    const portfolioTitle = document.getElementById("portfolio-title");
+    const portfolioText = document.getElementById("portfolio-text");
+    const portfolioItems = document.querySelectorAll(".portfolio-item");
+
+    function handleScroll() {
+        const sectionPos = portfolioSection.getBoundingClientRect().top;
+        const screenHeight = window.innerHeight;
+
+        if (sectionPos < screenHeight - 100) {
+            portfolioTitle.classList.add("opacity-100", "translate-y-0");
+            portfolioText.classList.add("opacity-100", "translate-y-0");
+
+            portfolioItems.forEach((item, index) => {
+                setTimeout(() => {
+                    let randomRotation = Math.random() * 10 - 5; // Rotasi antara -5deg sampai 5deg
+                    let randomX = Math.random() * 30 - 15; // Posisi X acak (-15px sampai 15px)
+                    let randomY = Math.random() * 30 - 15; // Posisi Y acak (-15px sampai 15px)
+
+                    item.classList.add("opacity-100", "translate-y-0");
+                    item.style.transform = `rotate(${randomRotation}deg) translate(${randomX}px, ${randomY}px)`;
+                }, index * 150);
+            });
+        }
+    }
+
+    window.addEventListener("scroll", handleScroll);
+    handleScroll();
+});
+
+    </script>
+</body>
+</html>
