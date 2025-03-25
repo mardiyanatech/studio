@@ -88,7 +88,7 @@
 
 
     <!-- Tailwind CSS -->
-    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preload" href="https://cdn.tailwindcss.com" as="style">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/js/all.min.js" crossorigin="anonymous"></script>
 </head>
@@ -99,7 +99,7 @@
         <!-- Header -->
         <header class="p-6 flex justify-between items-center bg-gray-800 shadow-md">
             <div class="flex items-center">
-                <img src="./asset/logo.jpg" onerror="this.src='https://placehold.co/100x100?text=No+Logo'" alt="Mardiyana Studio" class="h-12 rounded-[20px]">
+                <img src="./asset/logo.jpg" loading="lazy" onerror="this.src='https://placehold.co/100x100?text=No+Logo'" alt="Mardiyana Studio" class="h-12 rounded-[20px]">
                 <h1 class="text-xl font-bold ml-3">Mardiyana Tech Studio</h1>
             </div>
             
@@ -117,7 +117,7 @@
         </ul>
     </nav>
         <!-- Mobile Menu -->
-        <div id="mobile-menu" class="absolute top-16 left-0 w-full bg-gray-800 shadow-md lg:hidden transform transition-all duration-300 hidden opacity-0 scale-95 z-50">
+        <div id="mobile-menu" class="absolute top-16 left-0 w-full bg-gray-800 shadow-md lg:hidden transform transition-all duration-300 hidden opacity-0 scale-95 z-50" aria-label="Buka Menu Navigasi">
             <ul class="flex flex-col items-center space-y-4 py-6">
                 <li><a href="layanan.html" class="hover:text-blue-400">Layanan</a></li>
                 <li><a href="studio.html" class="hover:text-blue-400">Studio</a></li>
@@ -143,15 +143,15 @@
         <h4 class="text-2xl font-semibold text-gray-300">Template Original</h4>
         <div class="grid md:grid-cols-3 gap-6 mt-4 px-6">
             <div id="lp" class="p-6 bg-gray-700 shadow-lg rounded-lg transform hover:scale-105 transition">
-                <img src="./asset/landing-page/etaSeblak/etaSeblak.png" onerror="this.src='https://placehold.co/300x200?text=No+Image'" alt="Landing Page" class="w-full rounded-lg">
+                <img src="./asset/landing-page/etaSeblak/etaSeblak.png" loading="lazy" onerror="this.src='https://placehold.co/300x200?text=No+Image'" alt="Landing Page" class="w-full rounded-lg">
                 <h4 class="font-semibold mt-4 text-white">Landing - Page</h4>
             </div>
             <div id="ud" class="p-6 bg-gray-700 shadow-lg rounded-lg transform hover:scale-105 transition">
-                <img src="./asset/undangan-digital/bmEvent/bmEvent.png" onerror="this.src='https://placehold.co/300x200?text=No+Image'" alt="Undangan Digital" class="w-full rounded-lg">
+                <img src="./asset/undangan-digital/bmEvent/bmEvent.png" loading="lazy" onerror="this.src='https://placehold.co/300x200?text=No+Image'" alt="Undangan Digital" class="w-full rounded-lg">
                 <h4 class="font-semibold mt-4 text-white">Undangan - Digital</h4>
             </div>
             <div id="cw" class="p-6 bg-gray-700 shadow-lg rounded-lg transform hover:scale-105 transition">
-                <img src="./asset/custom-web/playstation/playstation.png" onerror="this.src='https://placehold.co/300x200?text=No+Image'" alt="Custom Website" class="w-full rounded-lg">
+                <img src="./asset/custom-web/playstation/playstation.png" loading="lazy" onerror="this.src='https://placehold.co/300x200?text=No+Image'" alt="Custom Website" class="w-full rounded-lg">
                 <h4 class="font-semibold mt-4 text-white">Custom - Website</h4>
             </div>
         </div>
@@ -162,11 +162,11 @@
     <h4 class="text-2xl font-semibold text-gray-300">Optimasi & Setup</h4>
     <div class="grid md:grid-cols-2 gap-6 mt-4 px-6">
         <div id="op" class="p-6 bg-gray-700 shadow-lg rounded-lg transform hover:scale-105 transition">
-            <img src="./asset/optimasiWix&Wp/wp/toko1.png" onerror="this.src='https://placehold.co/300x200?text=No+Image'" alt="Optimasi WordPress" class="w-full rounded-lg">
+            <img src="./asset/optimasiWix&Wp/wp/toko1.png" loading="lazy" onerror="this.src='https://placehold.co/300x200?text=No+Image'" alt="Optimasi WordPress" class="w-full rounded-lg">
             <h4 class="font-semibold mt-4 text-white">Optimasi - WordPress</h4>
         </div>
         <div id="ow" class="p-6 bg-gray-700 shadow-lg rounded-lg transform hover:scale-105 transition">
-            <img src="./asset/optimasiWix&Wp/wix/1.png" onerror="this.src='https://placehold.co/300x200?text=No+Image'" alt="Optimasi Wix" class="w-full rounded-lg">
+            <img src="./asset/optimasiWix&Wp/wix/1.png" loading="lazy" onerror="this.src='https://placehold.co/300x200?text=No+Image'" alt="Optimasi Wix" class="w-full rounded-lg">
             <h4 class="font-semibold mt-4 text-white">Optimasi - Wix</h4>
         </div>
     </div>
@@ -267,21 +267,16 @@
     });
 });
 
-        const menuBtn = document.getElementById("menu-btn");
-const mobileMenu = document.getElementById("mobile-menu");
+document.addEventListener("DOMContentLoaded", () => {
+      const menuBtn = document.getElementById("menu-btn");
+      const mobileMenu = document.getElementById("mobile-menu");
 
-menuBtn.addEventListener("click", () => {
-    mobileMenu.classList.toggle("hidden");
-    mobileMenu.classList.toggle("opacity-0");
-    mobileMenu.classList.toggle("scale-95");
-});
-
-// Tutup menu jika klik di luar menu dan tombol
-document.addEventListener("click", (event) => {
-    if (!menuBtn.contains(event.target) && !mobileMenu.contains(event.target)) {
-        mobileMenu.classList.add("hidden", "opacity-0", "scale-95");
-    }
-});
+      menuBtn.addEventListener("click", () => {
+          mobileMenu.classList.toggle("hidden");
+          mobileMenu.classList.toggle("opacity-0");
+          mobileMenu.classList.toggle("scale-95");
+      });
+  });
 
     </script>
 </body>
