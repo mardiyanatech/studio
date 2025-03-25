@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fashion Trends</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 text-gray-900">
+    
+    <header id="navbar" class="fixed top-0 left-0 w-full p-4 flex flex-col items-center z-50 transition-[background,backdrop-filter] duration-500 ease-in-out bg-transparent backdrop-blur-none">
+        <nav>
+            <ul id="nav-links" class="flex space-x-6 px-6 py-2 rounded-lg text-lg font-semibold text-gray-100 transition-colors duration-500 ease-in-out">
+                <li><a href="#about" class="hover:text-blue-300 drop-shadow-md">Tentang</a></li>
+                <li><a href="#products" class="hover:text-blue-300 drop-shadow-md">Produk</a></li>
+                <li><a href="#contact" class="hover:text-blue-300 drop-shadow-md">Kontak</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <section id="hero" class="relative text-center py-32 bg-cover bg-center flex items-center justify-center min-h-screen transition-all duration-700 ease-out" 
+    style="background-image: url('./asset/1.jpg'); background-attachment: fixed;">
+    
+    <div id="hero-content" class="bg-black bg-opacity-40 p-10 inline-block rounded-xl shadow-lg max-w-2xl opacity-0 scale-95 translate-y-5 transition-all duration-700 ease-out">
+        <h2 id="hero-title" class="text-white text-4xl font-bold tracking-wider uppercase opacity-0 translate-y-5 transition-all duration-700 ease-out delay-200">
+            Tren Fashion Terkini
+        </h2>
+        <p id="hero-text" class="text-white mt-4 text-lg font-light opacity-0 translate-y-5 transition-all duration-700 ease-out delay-400">
+            Tetap stylish dengan koleksi terbaru kami, temukan gaya yang sesuai denganmu.
+        </p>
+        <button id="hero-button" class="mt-6 px-8 py-3 bg-white text-black font-semibold rounded-full shadow-md hover:bg-gray-200 hover:scale-105 transition-all duration-300 ease-in-out opacity-0 translate-y-5 transition-all duration-700 ease-out delay-600">
+            Jelajahi Koleksi
+        </button>
+    </div>
+</section>
+
+<section id="about" class="py-20 bg-gradient-to-b from-gray-100 to-white text-center">
+    <div id="about-content" class="max-w-3xl mx-auto px-6 opacity-0 translate-y-10 transition-all duration-700 ease-out">
+        <h2 id="about-title" class="text-4xl font-extrabold text-gray-900 uppercase tracking-wide opacity-0 translate-y-5 transition-all duration-700 ease-out delay-200">
+            Tentang Kami
+        </h2>
+        <div id="about-line" class="w-0 h-1 bg-blue-500 mx-auto mt-3 transition-all duration-700 ease-out delay-400"></div>
+        <p id="about-text" class="mt-6 text-lg text-gray-600 leading-relaxed opacity-0 translate-y-5 transition-all duration-700 ease-out delay-600">
+            Kami menghadirkan tren terbaru dengan bahan berkualitas tinggi, desain eksklusif, dan kenyamanan maksimal. 
+            Fashion bukan sekadar pakaian, tetapi ekspresi diri yang elegan.
+        </p>
+    </div>
+</section>
+    
+    <section id="products" class="py-20 bg-gradient-to-b from-white to-gray-100 text-center">
+        <div class="max-w-6xl mx-auto px-6">
+            <h2 class="text-4xl font-extrabold text-gray-900 uppercase tracking-wide">Produk Unggulan</h2>
+            <div class="w-24 h-1 bg-blue-500 mx-auto mt-3"></div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mt-10">
+                <div class="bg-white shadow-lg p-6 rounded-xl transform transition duration-300 hover:scale-105 hover:shadow-2xl min-h-[500px] flex flex-col justify-between">
+                    <img src="./asset/2.jpg" alt="Fashion Item" class="w-full h-64 object-cover rounded-lg">
+                    <h3 class="text-2xl font-semibold mt-4 text-gray-900">Pakaian Eksklusif</h3>
+                    <p class="text-gray-600 mt-2">Tren terkini dengan bahan premium.</p>
+                </div>
+                <div class="bg-white shadow-lg p-6 rounded-xl transform transition duration-300 hover:scale-105 hover:shadow-2xl min-h-[500px] flex flex-col justify-between">
+                    <img src="./asset/3.jpg" alt="Fashion Item" class="w-full h-64 object-cover rounded-lg">
+                    <h3 class="text-2xl font-semibold mt-4 text-gray-900">Jaket Stylish</h3>
+                    <p class="text-gray-600 mt-2">Nyaman dipakai dalam berbagai cuaca.</p>
+                </div>
+                <div class="bg-white shadow-lg p-6 rounded-xl transform transition duration-300 hover:scale-105 hover:shadow-2xl min-h-[500px] flex flex-col justify-between">
+                    <img src="./asset/4.jpg" alt="Fashion Item" class="w-full h-64 object-cover rounded-lg">
+                    <h3 class="text-2xl font-semibold mt-4 text-gray-900">Sepatu Keren</h3>
+                    <p class="text-gray-600 mt-2">Buat penampilanmu semakin menarik.</p>
+                </div>
+                <div class="bg-white shadow-lg p-6 rounded-xl transform transition duration-300 hover:scale-105 hover:shadow-2xl min-h-[500px] flex flex-col justify-between">
+                    <img src="./asset/5.jpg" alt="Fashion Item" class="w-full h-64 object-cover rounded-lg">
+                    <h3 class="text-2xl font-semibold mt-4 text-gray-900">Sepatu Keren</h3>
+                    <p class="text-gray-600 mt-2">Buat penampilanmu semakin menarik.</p>
+                </div>
+                <div class="bg-white shadow-lg p-6 rounded-xl transform transition duration-300 hover:scale-105 hover:shadow-2xl min-h-[500px] flex flex-col justify-between">
+                    <img src="./asset/6.jpg" alt="Fashion Item" class="w-full h-64 object-cover rounded-lg">
+                    <h3 class="text-2xl font-semibold mt-4 text-gray-900">Sepatu Keren</h3>
+                    <p class="text-gray-600 mt-2">Buat penampilanmu semakin menarik.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+        
+    <section id="contact" class="py-16 text-center bg-gradient-to-b from-gray-100 to-gray-300">
+        <div class="max-w-2xl mx-auto px-6">
+            <h2 class="text-4xl font-extrabold text-gray-900 uppercase tracking-widest">Hubungi Kami</h2>
+            <p class="mt-4 text-gray-700 text-lg">Dapatkan info terbaru dan promo menarik.</p>
+    
+            <div class="mt-6 flex flex-col md:flex-row items-center justify-center gap-4">
+                <input type="email" placeholder="Masukkan email" 
+                    class="w-full md:w-80 px-4 py-3 text-gray-900 border border-gray-400 rounded-lg focus:outline-none focus:ring-2 focus:ring-black transition">
+                <button class="px-6 py-3 bg-black text-white font-semibold uppercase tracking-wide rounded-lg hover:bg-gray-800 transition duration-300">Kirim</button>
+            </div>
+    
+            <p class="mt-4 text-sm text-gray-600">Kami menghargai privasi Anda. Tidak akan ada spam!</p>
+        </div>
+    </section>
+    
+    
+    <footer class="text-center py-4 bg-gray-800 text-white">
+        <p>&copy; 2025 Mardiyana Tech Studio. Semua Hak Dilindungi.</p>
+    </footer>
+    <script>
+document.addEventListener("DOMContentLoaded", () => {
+    const navbar = document.getElementById("navbar");
+    let lastScrollY = window.scrollY; // Harus nyimpen angka, bukan boolean
+    let ticking = false;
+
+    const handleScroll = () => {
+        const currentScrollY = window.scrollY;
+        const scrolled = currentScrollY > 1;
+
+        if (scrolled !== (lastScrollY > 1)) {
+            navbar.classList.toggle("backdrop-blur-md", scrolled);
+            navbar.classList.toggle("shadow-md", scrolled);
+            navbar.classList.toggle("py-3", scrolled);
+        }
+
+        lastScrollY = currentScrollY; // Update nilai terakhir
+        ticking = false;
+    };
+
+    window.addEventListener("scroll", () => {
+        if (!ticking) {
+            ticking = true;
+            requestAnimationFrame(handleScroll);
+        }
+    }, { passive: true });
+});
+
+
+        document.addEventListener("DOMContentLoaded", function () {
+        const heroContent = document.getElementById("hero-content");
+        const heroTitle = document.getElementById("hero-title");
+        const heroText = document.getElementById("hero-text");
+        const heroButton = document.getElementById("hero-button");
+
+        // Menghapus kelas untuk efek animasi smooth
+        setTimeout(() => {
+            heroContent.classList.remove("opacity-0", "scale-95", "translate-y-5");
+            heroTitle.classList.remove("opacity-0", "translate-y-5");
+            heroText.classList.remove("opacity-0", "translate-y-5");
+            heroButton.classList.remove("opacity-0", "translate-y-5");
+        }, 100);
+    });
+
+    document.addEventListener("DOMContentLoaded", function () {
+        const aboutSection = document.getElementById("about");
+        const aboutContent = document.getElementById("about-content");
+        const aboutText = document.getElementById("about-text");
+        const aboutTitle = document.getElementById("about-title");
+        const underline = document.getElementById("underline");
+
+        function handleScroll() {
+            const sectionPos = aboutSection.getBoundingClientRect().top;
+            const windowHeight = window.innerHeight;
+
+            if (sectionPos < windowHeight - 100) {
+                aboutContent.classList.remove("opacity-0", "translate-y-10");
+                aboutText.classList.remove("opacity-0", "translate-y-5");
+                underline.style.width = "100%"; // Animasi underline
+            }
+        }
+    });
+
+    document.addEventListener("DOMContentLoaded", function () {
+        const aboutContent = document.getElementById("about-content");
+        const aboutTitle = document.getElementById("about-title");
+        const aboutLine = document.getElementById("about-line");
+        const aboutText = document.getElementById("about-text");
+
+        // Fungsi untuk trigger animasi saat bagian ini muncul di layar
+        function revealAboutSection() {
+            const sectionPosition = aboutContent.getBoundingClientRect().top;
+            const screenHeight = window.innerHeight;
+
+            if (sectionPosition < screenHeight - 50) {
+                aboutContent.classList.remove("opacity-0", "translate-y-10");
+                aboutTitle.classList.remove("opacity-0", "translate-y-5");
+                aboutText.classList.remove("opacity-0", "translate-y-5");
+                aboutLine.classList.add("w-24");
+            }
+        }
+
+        // Event listener untuk scroll
+        document.addEventListener("scroll", revealAboutSection);
+        revealAboutSection(); // Jalankan saat halaman dimuat
+    });
+
+
+    </script>
+    
+</body>
+</html>

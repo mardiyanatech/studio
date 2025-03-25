@@ -1,0 +1,109 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: WordPress.com - Themes - Artly\n"
+"Report-Msgid-Bugs-To: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2023-07-10T01:23:58+00:00\n"
+"PO-Revision-Date: 2023-07-09 12:05:55+0000\n"
+"Language: ro\n"
+"Plural-Forms: nplurals=3; plural=(n==1 ? 0 : (n==0 || (n%100 > 0 && n%100 < 20)) ? 1 : 2);\n"
+"X-Generator: GlotPress/2.4.0-alpha\n"
+
+#: styles/vivid-sage.json
+msgctxt "Style variation name"
+msgid "Vivid Sage"
+msgstr "Vivid Sage"
+
+#: styles/vivid-sage.json
+#: theme.json
+msgctxt "Font size name"
+msgid "Extra Large"
+msgstr "Foarte mare"
+
+#: styles/vivid-sage.json
+#: theme.json
+msgctxt "Font size name"
+msgid "Large"
+msgstr "Mare"
+
+#: styles/vivid-sage.json
+#: theme.json
+msgctxt "Font size name"
+msgid "Medium"
+msgstr "Mediu"
+
+#: styles/vivid-sage.json
+#: theme.json
+msgctxt "Font size name"
+msgid "Small"
+msgstr "Mic"
+
+#: styles/vivid-sage.json
+#: theme.json
+msgctxt "Font family name"
+msgid "System Font"
+msgstr "System Font"
+
+#: styles/space-cadet.json
+msgctxt "Style variation name"
+msgid "Space Cadet"
+msgstr "Space Cadet"
+
+#: styles/space-cadet.json
+#: styles/vivid-sage.json
+#: theme.json
+msgctxt "Color name"
+msgid "Tertiary"
+msgstr "Terță"
+
+#: styles/space-cadet.json
+#: styles/vivid-sage.json
+#: theme.json
+msgctxt "Color name"
+msgid "Background"
+msgstr "Fundal"
+
+#: styles/space-cadet.json
+#: styles/vivid-sage.json
+#: theme.json
+msgctxt "Color name"
+msgid "Foreground"
+msgstr "Prim-plan"
+
+#: styles/space-cadet.json
+#: styles/vivid-sage.json
+#: theme.json
+msgctxt "Color name"
+msgid "Secondary"
+msgstr "Secundară"
+
+#: styles/space-cadet.json
+#: styles/vivid-sage.json
+#: theme.json
+msgctxt "Color name"
+msgid "Primary"
+msgstr "Principală"
+
+#. Author URI of the theme
+msgid "https://automattic.com/"
+msgstr "https://automattic.com/"
+
+#. Author of the theme
+msgid "Automattic"
+msgstr "Automattic"
+
+#. Description of the theme
+msgid "Artly is a WordPress theme designed for blogs and magazines. Its modern, offset layout for posts and pages comes in three style variations, allowing you to showcase your content in a visually stunning and functional way. With Artly, you can display your content beautifully and efficiently, all in a package that is easy to use and customize."
+msgstr "Artly este o temă WordPress proiectată pentru bloguri și reviste. Aranjamentul său modern și deosebit pentru articole și pagini are trei variante de stil și îți permite să prezinți conținutul într-un mod vizual impresionant și totodată funcțional. Cu Artly, îți poți afișa conținutul într-un mod frumos și eficient, printr-un pachet ușor de utilizat și personalizat."
+
+#. Theme URI of the theme
+msgid "https://wordpress.com/theme/artly"
+msgstr "https://wordpress.com/theme/artly"
+
+#. Theme Name of the theme
+msgid "Artly"
+msgstr "Artly"

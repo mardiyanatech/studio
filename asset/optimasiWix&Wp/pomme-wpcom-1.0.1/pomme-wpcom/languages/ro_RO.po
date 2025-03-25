@@ -1,0 +1,272 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: WordPress.com - Themes - Pomme\n"
+"Report-Msgid-Bugs-To: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2023-12-18T03:34:54+00:00\n"
+"PO-Revision-Date: 2023-12-17 22:49:58+0000\n"
+"Language: ro\n"
+"Plural-Forms: nplurals=3; plural=(n==1 ? 0 : (n==0 || (n%100 > 0 && n%100 < 20)) ? 1 : 2);\n"
+"X-Generator: GlotPress/2.4.0-alpha\n"
+
+#: theme.json
+msgctxt "Template part name"
+msgid "Footer"
+msgstr "Subsol"
+
+#: theme.json
+msgctxt "Template part name"
+msgid "Header"
+msgstr "Antet"
+
+#: theme.json
+msgctxt "Font size name"
+msgid "Extra Large"
+msgstr "Foarte mare"
+
+#: theme.json
+msgctxt "Font size name"
+msgid "Large"
+msgstr "Mare"
+
+#: theme.json
+msgctxt "Font size name"
+msgid "Medium"
+msgstr "Mediu"
+
+#: theme.json
+msgctxt "Font size name"
+msgid "Small"
+msgstr "Mic"
+
+#: theme.json
+msgctxt "Font size name"
+msgid "Extra Small"
+msgstr "Foarte mic"
+
+#: theme.json
+msgctxt "Space size name"
+msgid "6"
+msgstr "6"
+
+#: theme.json
+msgctxt "Space size name"
+msgid "5"
+msgstr "5"
+
+#: theme.json
+msgctxt "Space size name"
+msgid "4"
+msgstr "4"
+
+#: theme.json
+msgctxt "Space size name"
+msgid "3"
+msgstr "3"
+
+#: theme.json
+msgctxt "Space size name"
+msgid "2"
+msgstr "2"
+
+#: theme.json
+msgctxt "Space size name"
+msgid "1"
+msgstr "1"
+
+#: theme.json
+msgctxt "Color name"
+msgid "Tertiary"
+msgstr "Terță"
+
+#: theme.json
+msgctxt "Color name"
+msgid "Background"
+msgstr "Fundal"
+
+#: theme.json
+msgctxt "Color name"
+msgid "Foreground"
+msgstr "Prim-plan"
+
+#: theme.json
+msgctxt "Color name"
+msgid "Secondary"
+msgstr "Secundară"
+
+#: theme.json
+msgctxt "Color name"
+msgid "Primary"
+msgstr "Principală"
+
+#: theme.json
+msgctxt "Custom template name"
+msgid "Product Tag Archive"
+msgstr "Arhivă etichete produse"
+
+#: theme.json
+msgctxt "Custom template name"
+msgid "Product Category Archive"
+msgstr "Arhivă categorii de produse"
+
+#: theme.json
+msgctxt "Custom template name"
+msgid "Single Product"
+msgstr "Produs singular"
+
+#: theme.json
+msgctxt "Custom template name"
+msgid "Product Search Results"
+msgstr "Rezultate de căutare pentru produse"
+
+#: theme.json
+msgctxt "Custom template name"
+msgid "Order Confirmation"
+msgstr "Confirmare comandă"
+
+#: theme.json
+msgctxt "Custom template name"
+msgid "Checkout"
+msgstr "Finalizare comandă"
+
+#: theme.json
+msgctxt "Custom template name"
+msgid "Cart"
+msgstr "Coș"
+
+#: theme.json
+msgctxt "Custom template name"
+msgid "Product Archive"
+msgstr "Arhivă produse"
+
+#: patterns/post-list.php
+msgctxt "Pattern title"
+msgid "Post List"
+msgstr "Listă cu articole"
+
+#: patterns/hidden-search-field.php:10
+msgid "Search"
+msgstr "Caută"
+
+#: patterns/hidden-search-field.php:10
+msgctxt "This is a placeholder for search field"
+msgid "Search..."
+msgstr "Caută..."
+
+#: patterns/hidden-search-field.php
+msgctxt "Pattern title"
+msgid "Hidden Search Field"
+msgstr "Câmp de căutare ascuns"
+
+#: patterns/hidden-no-results.php:11
+msgctxt "Message explaining that there are no results returned from a search"
+msgid "Sorry, but nothing matched your search terms. Please try again with some different keywords."
+msgstr "Regret, dar nu s-a potrivit nimic cu termenii tăi de căutare. Te rog încearcă din nou cu alte cuvinte cheie."
+
+#: patterns/hidden-no-results.php
+msgctxt "Pattern title"
+msgid "Hidden No Results Content"
+msgstr "Conținut ascuns fără rezultate"
+
+#: patterns/hidden-comments.php
+msgctxt "Pattern title"
+msgid "Comments"
+msgstr "Comentarii"
+
+#: patterns/hidden-404.php:18
+msgid "It looks like nothing was found at this location. Maybe try a search?"
+msgstr "Se pare că nu am găsit nimic la această locație. Încerci o nouă căutare?"
+
+#: patterns/hidden-404.php:13
+msgid "Oops! That page can&rsquo;t be found."
+msgstr "Hopa! Acea pagina nu poate fi găsită."
+
+#: patterns/hidden-404.php
+msgctxt "Pattern title"
+msgid "A 404 page"
+msgstr "O pagină 404"
+
+#: patterns/header.php
+msgctxt "Pattern title"
+msgid "Default header"
+msgstr "Antet implicit"
+
+#: patterns/footer.php:35
+msgid "Designed with %1$s"
+msgstr "Proiectat cu %1$s"
+
+#. Translators: WordPress link.
+#: patterns/footer.php:33
+msgid "https://wordpress.org"
+msgstr "https://wordpress.org"
+
+#: patterns/footer.php:25
+msgid "Email"
+msgstr "e-mail"
+
+#: patterns/footer.php:25
+msgid "Instagram"
+msgstr "Instagram"
+
+#: patterns/footer.php:25
+msgid "Tumblr"
+msgstr "Tumblr"
+
+#: patterns/footer.php
+msgctxt "Pattern title"
+msgid "Default footer"
+msgstr "Subsol implicit"
+
+#: patterns/checkout.php:16
+msgid "Checkout"
+msgstr "Finalizare"
+
+#: patterns/cart.php:106
+msgid "New in store"
+msgstr "Noutăți în magazin"
+
+#: patterns/cart.php:98
+msgid "Browse store"
+msgstr "Răsfoiește în magazin"
+
+#: patterns/cart.php:94
+msgid "Your cart is currently empty!"
+msgstr "Coșul tău este gol acum!"
+
+#: patterns/cart.php:30
+msgid "You may be interested in…"
+msgstr "S-ar putea să te intereseze..."
+
+#: patterns/cart.php:12
+msgid "Cart"
+msgstr "Coș de cumpărături"
+
+#: patterns/cart.php
+#: patterns/checkout.php
+msgctxt "Pattern title"
+msgid "Cart"
+msgstr "Coș"
+
+#. Author URI of the theme
+msgid "https://automattic.com/"
+msgstr "https://automattic.com"
+
+#. Author of the theme
+msgid "Automattic"
+msgstr "Automattic"
+
+#. Description of the theme
+msgid "Pomme is a simple portfolio theme for painters."
+msgstr "Pomme este o temă simplă pentru portofolii pentru pictori."
+
+#. Theme URI of the theme
+msgid "https://wordpress.com/theme/pomme/"
+msgstr "https://wordpress.com/theme/pomme/"
+
+#. Theme Name of the theme
+msgid "Pomme"
+msgstr "Pomme"

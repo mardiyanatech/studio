@@ -1,0 +1,273 @@
+# Copyright (C) 2024 Automattic
+# This file is distributed under the GNU General Public License v2 or later.
+msgid ""
+msgstr ""
+"Project-Id-Version: Feature 1.0\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/theme/feature\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2024-09-12T03:12:49+00:00\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"X-Generator: WP-CLI 2.11.0\n"
+"X-Domain: feature\n"
+
+#. Theme Name of the theme
+#: style.css
+msgid "Feature"
+msgstr ""
+
+#. Theme URI of the theme
+#: style.css
+msgid "https://themeshaper.com/feature/"
+msgstr ""
+
+#. Description of the theme
+#: style.css
+msgid "Feature is a magazine theme focused on sizable typography and imagery to grow your blog posts, reviews, artwork, and news."
+msgstr ""
+
+#. Author of the theme
+#: style.css
+msgid "Automattic"
+msgstr ""
+
+#. Author URI of the theme
+#: style.css
+msgid "https://automattic.com"
+msgstr ""
+
+#: patterns/404.php
+msgctxt "Pattern title"
+msgid "404"
+msgstr ""
+
+#: patterns/404.php:19
+msgid "Oops! No page here..."
+msgstr ""
+
+#: patterns/404.php:23
+msgid "It looks like nothing was found at this location. Maybe try a search?"
+msgstr ""
+
+#: patterns/comments.php
+msgctxt "Pattern title"
+msgid "Comments"
+msgstr ""
+
+#: patterns/footer-pages.php
+msgctxt "Pattern title"
+msgid "footer-pages"
+msgstr ""
+
+#: patterns/footer-pages.php:16
+#: patterns/footer.php:16
+msgid "Feature is an online magazine made by culture lovers. We offer weekly reflections, reviews, and news on art, literature, and music."
+msgstr ""
+
+#: patterns/footer-pages.php:20
+#: patterns/footer.php:20
+msgid "Please subscribe to our newsletter to let us know whenever we publish new content. We send no spam, and you can unsubscribe at any time."
+msgstr ""
+
+#: patterns/footer-pages.php:49
+#: patterns/footer.php:49
+msgid "Designed with WordPress."
+msgstr ""
+
+#: patterns/footer.php
+msgctxt "Pattern title"
+msgid "footer"
+msgstr ""
+
+#: patterns/header-pages.php
+msgctxt "Pattern title"
+msgid "header-pages"
+msgstr ""
+
+#: patterns/hidden-no-results-content.php
+msgctxt "Pattern title"
+msgid "Hidden No Results Content"
+msgstr ""
+
+#: patterns/hidden-no-results-content.php:10
+msgctxt "Message explaining that there are no results returned from a search"
+msgid "Sorry, but nothing matched your search terms. Please try again with some different keywords."
+msgstr ""
+
+#: patterns/post-meta.php
+msgctxt "Pattern title"
+msgid "post-meta"
+msgstr ""
+
+#: patterns/post-meta.php:15
+#: patterns/post-meta.php:21
+msgid "·"
+msgstr ""
+
+#: styles/antiqva.json
+#: styles/guarani.json
+#: styles/guava.json
+#: styles/wax.json
+#: theme.json
+msgctxt "Color name"
+msgid "Primary"
+msgstr ""
+
+#: styles/antiqva.json
+#: styles/guarani.json
+#: styles/guava.json
+#: styles/wax.json
+#: theme.json
+msgctxt "Color name"
+msgid "Secondary"
+msgstr ""
+
+#: styles/antiqva.json
+#: styles/guarani.json
+#: styles/guava.json
+#: styles/wax.json
+#: theme.json
+msgctxt "Color name"
+msgid "Foreground"
+msgstr ""
+
+#: styles/antiqva.json
+#: styles/guarani.json
+#: styles/guava.json
+#: styles/wax.json
+#: theme.json
+msgctxt "Color name"
+msgid "Background"
+msgstr ""
+
+#: styles/antiqva.json
+#: styles/guarani.json
+#: styles/guava.json
+#: styles/wax.json
+#: theme.json
+msgctxt "Color name"
+msgid "Tertiary"
+msgstr ""
+
+#: styles/antiqva.json
+msgctxt "Style variation name"
+msgid "antiqva"
+msgstr ""
+
+#: styles/guarani.json
+msgctxt "Style variation name"
+msgid "Guarani"
+msgstr ""
+
+#: styles/guava.json
+msgctxt "Style variation name"
+msgid "Guava"
+msgstr ""
+
+#: styles/wax.json
+msgctxt "Style variation name"
+msgid "Wax"
+msgstr ""
+
+#: theme.json
+msgctxt "Duotone name"
+msgid "Redish"
+msgstr ""
+
+#: theme.json
+msgctxt "Duotone name"
+msgid "Greenish"
+msgstr ""
+
+#: theme.json
+msgctxt "Duotone name"
+msgid "Pistachio"
+msgstr ""
+
+#: theme.json
+msgctxt "Duotone name"
+msgid "Monotone"
+msgstr ""
+
+#: theme.json
+msgctxt "Space size name"
+msgid "2X-Small"
+msgstr ""
+
+#: theme.json
+msgctxt "Space size name"
+msgid "X-Small"
+msgstr ""
+
+#: theme.json
+msgctxt "Space size name"
+msgid "Small"
+msgstr ""
+
+#: theme.json
+msgctxt "Space size name"
+msgid "Medium"
+msgstr ""
+
+#: theme.json
+msgctxt "Space size name"
+msgid "Large"
+msgstr ""
+
+#: theme.json
+msgctxt "Space size name"
+msgid "X-Large"
+msgstr ""
+
+#: theme.json
+msgctxt "Space size name"
+msgid "2X-Large"
+msgstr ""
+
+#: theme.json
+msgctxt "Font family name"
+msgid "System Font"
+msgstr ""
+
+#: theme.json
+msgctxt "Font family name"
+msgid "Averia Serif Libre"
+msgstr ""
+
+#: theme.json
+msgctxt "Font family name"
+msgid "Teko"
+msgstr ""
+
+#: theme.json
+msgctxt "Font family name"
+msgid "Labrada"
+msgstr ""
+
+#: theme.json
+msgctxt "Font family name"
+msgid "Plus Jakarta Sans"
+msgstr ""
+
+#: theme.json
+msgctxt "Font size name"
+msgid "Small"
+msgstr ""
+
+#: theme.json
+msgctxt "Font size name"
+msgid "Medium"
+msgstr ""
+
+#: theme.json
+msgctxt "Font size name"
+msgid "Large"
+msgstr ""
+
+#: theme.json
+msgctxt "Font size name"
+msgid "Extra Large"
+msgstr ""

@@ -1,0 +1,116 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: WordPress.com - Themes - Sunderland\n"
+"Report-Msgid-Bugs-To: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2024-03-30T04:43:47+00:00\n"
+"PO-Revision-Date: 2023-11-13 15:40:02+0000\n"
+"Language: ro\n"
+"Plural-Forms: nplurals=3; plural=(n==1 ? 0 : (n==0 || (n%100 > 0 && n%100 < 20)) ? 1 : 2);\n"
+"X-Generator: GlotPress/2.4.0-alpha\n"
+
+#: theme.json
+msgctxt "Font size name"
+msgid "Extra Large"
+msgstr "Foarte mare"
+
+#: theme.json
+msgctxt "Font size name"
+msgid "Large"
+msgstr "Mare"
+
+#: theme.json
+msgctxt "Font size name"
+msgid "Medium"
+msgstr "Mediu"
+
+#: theme.json
+msgctxt "Font size name"
+msgid "Small"
+msgstr "Mic"
+
+#: theme.json
+msgctxt "Font family name"
+msgid "System Font"
+msgstr "System Font"
+
+#: theme.json
+msgctxt "Color name"
+msgid "Tertiary"
+msgstr "Terță"
+
+#: theme.json
+msgctxt "Color name"
+msgid "Secondary"
+msgstr "Secundară"
+
+#: theme.json
+msgctxt "Color name"
+msgid "Primary"
+msgstr "Principală"
+
+#: theme.json
+msgctxt "Color name"
+msgid "Contrast"
+msgstr "Contrast"
+
+#: theme.json
+msgctxt "Color name"
+msgid "Base"
+msgstr "Bază"
+
+#: patterns/home.php
+msgctxt "Pattern title"
+msgid "home"
+msgstr "prima pagină"
+
+#: patterns/footer.php
+msgctxt "Pattern title"
+msgid "Default footer"
+msgstr "Subsol implicit"
+
+#: patterns/404.php
+msgctxt "Pattern title"
+msgid "A 404 page"
+msgstr "O pagină 404"
+
+#. Description of the theme
+msgid "Sunderland is a simple theme that supports full-site editing. It comes with a set of minimal templates and design settings that can be manipulated through Global Styles. Use it to build something beautiful."
+msgstr "Sunderland este o temă simplă care acceptă editarea întregului site. Ea conține un set de șabloane minimale și setări pentru design care pot fi administrate prin stilurile globale. O poți folosi pentru a construi ceva frumos."
+
+#: patterns/home.php:31
+msgid "more info here"
+msgstr "mai multe informații aici"
+
+#: patterns/home.php:31
+msgid "Eden Garden Amphitheater on June 25th"
+msgstr "Amfiteatrul Eden Garden, pe 25 iunie"
+
+#: patterns/home.php:31
+msgid "Release Party and exclusive pre-show cocktail reception"
+msgstr "Petrecere de lansare și primire exclusivă cu cocktailuri înainte de spectacol"
+
+#: patterns/home.php:31
+msgid "in stores June 26th"
+msgstr "în magazine, pe 26 iunie"
+
+#: patterns/footer.php:24
+msgid "Designed with %1$s"
+msgstr "Proiectat cu %1$s"
+
+#. Translators: WordPress link.
+#: patterns/footer.php:22
+msgid "https://wordpress.org"
+msgstr "https://wordpress.org"
+
+#: patterns/404.php:15
+msgid "It looks like nothing was found at this location. Maybe try a search?"
+msgstr "Se pare că nu am găsit nimic la această locație. Încerci o nouă căutare?"
+
+#: patterns/404.php:11
+msgid "Oops! That page can&rsquo;t be found."
+msgstr "Hopa! Acea pagina nu poate fi găsită."
