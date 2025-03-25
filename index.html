@@ -54,50 +54,58 @@
     </head>
     
 
-<body class="bg-gray-900 text-white">
+<body class="bg-gray-900 text-white pt-[64px]">
     
-    <!-- Header -->
-    <header class="p-6 flex justify-between items-center bg-gray-800 shadow-md">
+<!-- Header -->
+<header class="fixed top-0 left-0 w-full h-16 z-50 bg-gray-800 shadow-md transition-all duration-300">
+    <div class="px-6 flex justify-between items-center h-full">
         <div class="flex items-center">
             <img src="./asset/logo.jpg" width="48" height="48" loading="lazy" alt="Mardiyana Tech Studio Logo" 
                  class="h-12 w-12 rounded-[20px] object-cover" 
                  onerror="this.src='https://placehold.co/48x48?text=No+Logo'">
             <h1 class="text-xl font-bold ml-3 text-white">Mardiyana Tech Studio</h1>
         </div>
-    
+
         <!-- Navbar -->
-        <nav class="relative">
-            <button id="menu-btn" class="lg:hidden focus:outline-none" aria-label="Toggle Menu">
-                <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <nav>
+            <!-- Button Menu untuk Mobile -->
+            <button id="menu-btn" class="lg:hidden p-2 rounded-md text-white bg-gray-700 hover:bg-gray-600 
+                focus:outline-none focus:ring-2 focus:ring-blue-400 transition-all duration-300"
+                aria-label="Toggle Menu">
+                <svg class="w-8 h-8" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                     <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16m-7 6h7"></path>
                 </svg>
             </button>
+
+            <!-- Menu Desktop -->
             <ul class="hidden lg:flex space-x-6 text-white">
                 <li><a href="layanan.html" class="hover:text-blue-400">Layanan</a></li>
                 <li><a href="studio.html" class="hover:text-blue-400">Studio</a></li>
                 <li><a href="contact.html" class="hover:text-blue-400">Contact</a></li>
             </ul>
         </nav>
-    
-        <!-- Mobile Menu -->
-        <div id="mobile-menu" class="absolute top-16 left-0 w-full bg-gray-800 shadow-md lg:hidden transform transition-all duration-300 sr-only opacity-0 scale-95 z-50"
-             aria-hidden="true">
-            <ul class="flex flex-col items-center space-y-4 py-6 text-white">
-                <li><a href="layanan.html" class="hover:text-blue-400">Layanan</a></li>
-                <li><a href="studio.html" class="hover:text-blue-400">Studio</a></li>
-                <li><a href="contact.html" class="hover:text-blue-400">Contact</a></li>
-            </ul>
-        </div>
-    </header>
-    
-        
-    <!-- Hero Section -->
-    <section class="text-center py-20 bg-gradient-to-r from-blue-600 to-purple-600 text-white">
+    </div>
+
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="hidden fixed top-16 left-0 w-full bg-black/60 backdrop-blur-md shadow-md lg:hidden transition-all duration-300">
+        <ul class="flex flex-col items-center space-y-4 py-6 text-white font-semibold drop-shadow-md">
+            <li><a href="layanan.html" class="hover:text-blue-400">Layanan</a></li>
+            <li><a href="studio.html" class="hover:text-blue-400">Studio</a></li>
+            <li><a href="contact.html" class="hover:text-blue-400">Contact</a></li>
+        </ul>
+    </div>        
+</header>
+
+<!-- Hero Section -->
+<section class="pt-16 text-center py-20 bg-gradient-to-r from-blue-600 to-purple-600 text-white">
+    <div class="container mx-auto">
         <h2 id="title" class="text-4xl font-bold" aria-label="Bangun Website Profesional">Bangun Website Profesional</h2>
         <p id="subtitle" class="mt-4 text-lg">Tingkatkan bisnis Anda dengan website modern dan responsif.</p>
-        <a id="cta" href="layanan.html" class="mt-6 inline-block bg-gray-100 text-blue-700 px-6 py-3 rounded-lg font-semibold hover:bg-gray-200"
+        <a id="cta" href="layanan.html" class="mt-6 inline-block bg-gray-100 text-blue-700 px-6 py-3 rounded-lg font-semibold 
+           hover:bg-gray-200 transition-all duration-300"
            aria-label="Lihat layanan pembuatan website profesional">Lihat Layanan</a>
-    </section>
+    </div>
+</section>
     
     
     <!-- Portfolio -->
@@ -210,15 +218,13 @@
     
             // Toggle Mobile Menu
             const menuBtn = document.getElementById("menu-btn");
-            const mobileMenu = document.getElementById("mobile-menu");
-    
-            if (menuBtn && mobileMenu) {
-                menuBtn.addEventListener("click", () => {
-                    mobileMenu.classList.toggle("hidden");
-                    mobileMenu.classList.toggle("opacity-0");
-                    mobileMenu.classList.toggle("scale-95");
-                }, { passive: true });
-            }
+    const mobileMenu = document.getElementById("mobile-menu");
+
+    if (menuBtn && mobileMenu) {
+        menuBtn.addEventListener("click", () => {
+            mobileMenu.classList.toggle("hidden");
+        });
+    }
         });
     </script>
     
